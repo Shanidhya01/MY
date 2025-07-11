@@ -1,0 +1,46 @@
+export const projects = [
+  {
+    title: 'The Solve Space',
+    description:  "A modern full-stack web application template built with Next.js, Stackflow, and Appwrite. This project demonstrates seamless navigation and state management using Stackflow, combined with Appwrite's powerful backend-as-a-service features for authentication, database, and storage. Ideal for building scalable, production-ready SaaS apps with a clean developer experience.",
+    image: '/images/1.png',
+    tags: ['Next.js', 'Stackflow', 'Appwrite', 'TypeScript'],
+    source : 'https://github.com/Shanidhya01/StackFlow-Appwrite',
+    visit : 'https://github.com/Shanidhya01/StackFlow-Appwrite',
+    // visit: 'https://google.com',
+    id: 0,
+  },
+  {
+    title: 'AI Cloudinary SaaS',
+    description: "A modern SaaS starter built with Next.js 14, Clerk authentication, Tailwind CSS (with DaisyUI), App Router, and Cloudinary integration for image and video upload, transformation, and sharing. Features include secure authentication, video upload & gallery, social share image generator, and a beautiful, customizable UI.",
+    image: '/images/2.png',
+    tags: ['React', 'JavaScript'],
+    source: 'https://github.com/Shanidhya01/Cloudinary-Saas',
+    visit: 'https://google.com',
+    id: 1,
+  },
+  {
+    title: 'PassOP Password Manager',
+    description: "A simple and modern password manager built with React (Vite), Node.js, Express, and MongoDB. PassOP lets you securely store, view, copy, edit, and delete your passwords for different websites. Features include a responsive UI, toast notifications, and a clean, minimal design.",
+    image: '/images/3.jpg',
+    tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Vite', 'Tailwind CSS'],
+    source: 'https://github.com/Shanidhya01/Password-Manager',
+    visit: 'https://github.com/Shanidhya01/Password-Manager',
+    id: 2,
+  },
+  {
+    title: '3D Solar System Simulation',
+    description: "A fully interactive 3D simulation of the Solar System built with Three.js. Features real-time planetary orbits, individual speed controls, pause/resume, dark/light mode, planet tooltips, and a starfield background. The app is fully responsive and allows users to explore the solar system with an intuitive camera interface.",
+    image: '/images/4.jpg',
+    tags: ['Three.js', 'JavaScript', '3D', 'Frontend'],
+    source: 'https://github.com/Shanidhya01/3-D-Solar-System',
+    visit: 'https://3-d-solar-system-topaz.vercel.app/',
+    id: 3,
+  },
+];
+
+export const TimeLineData = [
+  { year: 2024, text: 'Started my journey', },
+  { year: 2024, text: 'Worked on my first project', },
+  { year: 2024, text: 'Learned React and built several projects', },
+  { year: 2025, text: 'Explored backend technologies and built full-stack applications', },
+];
