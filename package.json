@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build && next export",
+    "dev": "cross-env NODE_OPTIONS=--openssl-legacy-provider next dev",
+    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider next build && next export",
     "start": "next start"
   },
   "dependencies": {
@@ -15,5 +15,8 @@
     "react-icons": "^4.12.0",
     "styled-components": "^5.3.11",
     "styled-normalize": "^8.1.1"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
   }
 }

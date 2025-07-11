@@ -4,7 +4,7 @@ import { Section, SectionText, SectionTitle } from '../../styles/GlobalComponent
 import Button from '../../styles/GlobalComponents/Button';
 import { LeftSection } from './HeroStyles';
 
-const Hero = (props) => (
+const Hero = () => (
   <>
     <Section row nopadding>
       <LeftSection>
@@ -15,7 +15,9 @@ const Hero = (props) => (
         <SectionText>
           I’m a passionate web developer with experience in building dynamic and responsive web applications.
         </SectionText>
-        <Button onClick={props.handleClick}>Download Resume</Button>
+        <a href="/Shanidhya_Resume.pdf" download style={{ textDecoration: 'none' }}>
+          <Button>View Resume</Button>
+        </a>
       </LeftSection>
     </Section>
   </>
