@@ -1,5 +1,15 @@
 export const projects = [
   {
+    title: 'Victoria AI Assistant',
+    description: "An advanced AI voice assistant built with React and Google Gemini AI. Features include voice recognition, text-to-speech with female voice synthesis, cyberpunk-themed UI with animated backgrounds, real-time voice commands, and intelligent conversation capabilities. Victoria can open websites, provide information, and engage in natural conversations with users.",
+    image: '/images/5.png',
+    tags: ['React', 'Google Gemini AI', 'Speech Recognition', 'Voice Synthesis'],
+    source : 'https://github.com/Shanidhya01/VOICE-ASSISTANT',
+    visit : 'https://shanidhya-ai-voice-assistance.netlify.app/',
+    // visit: 'https://google.com',
+    id: 0,
+  },
+  {
     title: 'The Solve Space',
     description:  "A modern full-stack web application template built with Next.js, Stackflow, and Appwrite. This project demonstrates seamless navigation and state management using Stackflow, combined with Appwrite's powerful backend-as-a-service features for authentication, database, and storage. Ideal for building scalable, production-ready SaaS apps with a clean developer experience.",
     image: '/images/1.png',
@@ -7,7 +17,7 @@ export const projects = [
     source : 'https://github.com/Shanidhya01/StackFlow-Appwrite',
     visit : 'https://github.com/Shanidhya01/StackFlow-Appwrite',
     // visit: 'https://google.com',
-    id: 0,
+    id: 1,
   },
   {
     title: 'AI Cloudinary SaaS',
@@ -16,7 +26,7 @@ export const projects = [
     tags: ['React', 'JavaScript'],
     source: 'https://github.com/Shanidhya01/Cloudinary-Saas',
     visit: 'https://google.com',
-    id: 1,
+    id: 2,
   },
   {
     title: 'PassOP Password Manager',
@@ -25,7 +35,7 @@ export const projects = [
     tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Vite', 'Tailwind CSS'],
     source: 'https://github.com/Shanidhya01/Password-Manager',
     visit: 'https://github.com/Shanidhya01/Password-Manager',
-    id: 2,
+    id: 3,
   },
   {
     title: '3D Solar System Simulation',
@@ -34,7 +44,7 @@ export const projects = [
     tags: ['Three.js', 'JavaScript', '3D', 'Frontend'],
     source: 'https://github.com/Shanidhya01/3-D-Solar-System',
     visit: 'https://3-d-solar-system-topaz.vercel.app/',
-    id: 3,
+    id: 4,
   },
 ];
 
