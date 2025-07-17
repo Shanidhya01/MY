@@ -1,5 +1,14 @@
 export const projects = [
   {
+  title: 'Victor AI ChatBot',
+  description: "A modern, responsive AI chatbot powered by Google Gemini and built with Next.js and React. Features include real-time chat, dark/light mode, glassmorphism UI, mobile responsiveness, chat history, one-click copy with popup, and seamless Gemini API integration. Designed for beautiful, intelligent conversations.",
+  image: '/images/8.png',
+  tags: ['Next.js', 'React', 'Google Gemini AI', 'Tailwind CSS', 'Chatbot'],
+  source: 'https://github.com/Shanidhya01/AI-ChatBot',
+  visit: 'https://shanidhya-ai-chat-bot.vercel.app/',
+  id: 0,
+  },
+  {
     title: 'Victoria AI Assistant',
     description: "An advanced AI voice assistant built with React and Google Gemini AI. Features include voice recognition, text-to-speech with female voice synthesis, cyberpunk-themed UI with animated backgrounds, real-time voice commands, and intelligent conversation capabilities. Victoria can open websites, provide information, and engage in natural conversations with users.",
     image: '/images/5.png',
@@ -7,7 +16,7 @@ export const projects = [
     source : 'https://github.com/Shanidhya01/VOICE-ASSISTANT',
     visit : 'https://shanidhya-ai-voice-assistance.netlify.app/',
     // visit: 'https://google.com',
-    id: 0,
+    id: 1,
   },
   {
     title: 'The Solve Space',
@@ -17,7 +26,25 @@ export const projects = [
     source : 'https://github.com/Shanidhya01/StackFlow-Appwrite',
     visit : 'https://github.com/Shanidhya01/StackFlow-Appwrite',
     // visit: 'https://google.com',
-    id: 1,
+    id: 2,
+  },
+  {
+    title: 'Quiz App',
+    description: "A simple and interactive Quiz App built with HTML, CSS, and JavaScript. Features include multiple-choice questions, instant feedback, score tracking, and a responsive user interface. Designed for learning and testing knowledge in a fun way.",
+    image: '/images/6.png', // Update this path to your quiz app image if available
+    tags: ['JavaScript', 'HTML', 'CSS', 'Frontend', 'Quiz'],
+    source: 'https://github.com/Shanidhya01/Ai-Quiz-Application', // Update with your actual repository URL if available
+    visit: 'https://weather-app-byshanidhya.vercel.app/',      // Update with your live demo link if available
+    id: 6,
+  },
+  {
+    title: 'Weather App',
+    description: "A responsive Weather App built with HTML, CSS, and JavaScript. Features include real-time weather data fetching, location-based search, dynamic weather icons, and a clean, user-friendly interface. Designed to provide accurate weather updates for any city worldwide.",
+    image: '/images/7.png', // Update this path if you have a screenshot
+    tags: ['JavaScript', 'HTML', 'CSS', 'Frontend', 'Weather'],
+    source: 'https://github.com/Shanidhya01/Weather-app',
+    visit: 'https://weather-app-byshanidhya.vercel.app/',
+    id: 8,
   },
   {
     title: 'AI Cloudinary SaaS',
@@ -25,8 +52,9 @@ export const projects = [
     image: '/images/2.png',
     tags: ['React', 'JavaScript'],
     source: 'https://github.com/Shanidhya01/Cloudinary-Saas',
-    visit: 'https://google.com',
-    id: 2,
+    visit: 'https://github.com/Shanidhya01/Cloudinary-Saas',
+    // visit: 'https://google.com',
+    id: 3,
   },
   {
     title: 'PassOP Password Manager',
@@ -35,7 +63,7 @@ export const projects = [
     tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Vite', 'Tailwind CSS'],
     source: 'https://github.com/Shanidhya01/Password-Manager',
     visit: 'https://github.com/Shanidhya01/Password-Manager',
-    id: 3,
+    id: 4,
   },
   {
     title: '3D Solar System Simulation',
@@ -44,7 +72,7 @@ export const projects = [
     tags: ['Three.js', 'JavaScript', '3D', 'Frontend'],
     source: 'https://github.com/Shanidhya01/3-D-Solar-System',
     visit: 'https://3-d-solar-system-topaz.vercel.app/',
-    id: 4,
+    id: 5,
   },
 ];
 
