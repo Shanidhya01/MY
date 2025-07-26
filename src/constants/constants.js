@@ -1,12 +1,21 @@
 export const projects = [
   {
-  title: 'Victor AI ChatBot',
-  description: "A modern, responsive AI chatbot powered by Google Gemini and built with Next.js and React. Features include real-time chat, dark/light mode, glassmorphism UI, mobile responsiveness, chat history, one-click copy with popup, and seamless Gemini API integration. Designed for beautiful, intelligent conversations.",
-  image: '/images/8.png',
-  tags: ['Next.js', 'React', 'Google Gemini AI', 'Tailwind CSS', 'Chatbot'],
-  source: 'https://github.com/Shanidhya01/AI-ChatBot',
-  visit: 'https://shanidhya-ai-chat-bot.vercel.app/',
-  id: 0,
+    title: 'Victor AI ChatBot',
+    description: "A modern, responsive AI chatbot powered by Google Gemini and built with Next.js and React. Features include real-time chat, dark/light mode, glassmorphism UI, mobile responsiveness, chat history, one-click copy with popup, and seamless Gemini API integration. Designed for beautiful, intelligent conversations.",
+    image: '/images/8.png',
+    tags: ['Next.js', 'React', 'Google Gemini AI', 'Tailwind CSS', 'Chatbot'],
+    source: 'https://github.com/Shanidhya01/AI-ChatBot',
+    visit: 'https://shanidhya-ai-chat-bot.vercel.app/',
+    id: 0,
+  },
+  {
+    title: 'Expense Tracker',
+    description: "A modern personal finance management platform built with React and Vite. Features include secure user authentication, profile photo upload, responsive expense tracking forms, real-time balance calculations, and intuitive financial categorization. Designed with Tailwind CSS for a clean, mobile-first interface that helps users take control of their personal finances.",
+    image: '/images/9.png',
+    tags: ['React', 'Vite', 'Tailwind CSS', 'Personal Finance', 'Authentication'],
+    source: 'https://github.com/Shanidhya01/expense-tracker',
+    visit: 'https://expense-tracker-final-omega.vercel.app/',
+    id: 1,
   },
   {
     title: 'Victoria AI Assistant',
@@ -16,7 +25,27 @@ export const projects = [
     source : 'https://github.com/Shanidhya01/VOICE-ASSISTANT',
     visit : 'https://shanidhya-ai-voice-assistance.netlify.app/',
     // visit: 'https://google.com',
-    id: 1,
+    id: 2,
+  },
+  {
+    title: 'Entertainment Hub',
+    description: "A modern entertainment platform built with React and modern web technologies. Features include movie/TV show discovery, real-time search functionality, detailed content information, user ratings and reviews, and personalized watchlists. Designed with a sleek, responsive interface that provides an immersive entertainment browsing experience across all devices.",
+    image: '/images/10.png',
+    tags: ['React', 'JavaScript', 'Entertainment', 'Movies', 'API Integration'],
+    source: 'https://github.com/Shanidhya01/entertainment-hub',
+    visit: 'https://movie-hub-nu-seven.vercel.app/',
+    // visit: 'https://google.com',
+    id: 3,
+  },
+  {
+    title: 'Video Calling WebApp',
+    description: "A real-time video calling web application built with Next.js, ZEGOCLOUD, and TypeScript. Features include secure video/audio calls, room creation and joining, responsive design for desktop and mobile, shareable room links, and an intuitive glassmorphism UI. Connect with friends and colleagues seamlessly over the internet with high-quality communication.",
+    image: '/images/11.png',
+    tags: ['Next.js', 'TypeScript', 'ZEGOCLOUD', 'Tailwind CSS', 'Video Calling'],
+    source: 'https://github.com/Shanidhya01/VIDEO-CALLING',
+    visit: 'https://video-calling-sk.vercel.app/',
+    // visit: 'https://google.com',
+    id: 11,
   },
   {
     title: 'The Solve Space',
@@ -26,7 +55,7 @@ export const projects = [
     source : 'https://github.com/Shanidhya01/StackFlow-Appwrite',
     visit : 'https://github.com/Shanidhya01/StackFlow-Appwrite',
     // visit: 'https://google.com',
-    id: 2,
+    id: 4,
   },
   {
     title: 'Quiz App',
@@ -35,7 +64,7 @@ export const projects = [
     tags: ['JavaScript', 'HTML', 'CSS', 'Frontend', 'Quiz'],
     source: 'https://github.com/Shanidhya01/Ai-Quiz-Application', // Update with your actual repository URL if available
     visit: 'https://weather-app-byshanidhya.vercel.app/',      // Update with your live demo link if available
-    id: 6,
+    id: 5,
   },
   {
     title: 'Weather App',
@@ -44,7 +73,7 @@ export const projects = [
     tags: ['JavaScript', 'HTML', 'CSS', 'Frontend', 'Weather'],
     source: 'https://github.com/Shanidhya01/Weather-app',
     visit: 'https://weather-app-byshanidhya.vercel.app/',
-    id: 8,
+    id: 6,
   },
   {
     title: 'AI Cloudinary SaaS',
@@ -54,7 +83,7 @@ export const projects = [
     source: 'https://github.com/Shanidhya01/Cloudinary-Saas',
     visit: 'https://github.com/Shanidhya01/Cloudinary-Saas',
     // visit: 'https://google.com',
-    id: 3,
+    id: 7,
   },
   {
     title: 'PassOP Password Manager',
@@ -63,7 +92,7 @@ export const projects = [
     tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Vite', 'Tailwind CSS'],
     source: 'https://github.com/Shanidhya01/Password-Manager',
     visit: 'https://github.com/Shanidhya01/Password-Manager',
-    id: 4,
+    id: 8,
   },
   {
     title: '3D Solar System Simulation',
@@ -72,7 +101,7 @@ export const projects = [
     tags: ['Three.js', 'JavaScript', '3D', 'Frontend'],
     source: 'https://github.com/Shanidhya01/3-D-Solar-System',
     visit: 'https://3-d-solar-system-topaz.vercel.app/',
-    id: 5,
+    id: 9,
   },
 ];
 
