@@ -63,7 +63,7 @@ export const projects = [
     image: '/images/6.png', // Update this path to your quiz app image if available
     tags: ['JavaScript', 'HTML', 'CSS', 'Frontend', 'Quiz'],
     source: 'https://github.com/Shanidhya01/Ai-Quiz-Application', // Update with your actual repository URL if available
-    visit: 'https://weather-app-byshanidhya.vercel.app/',      // Update with your live demo link if available
+    visit: 'https://shanidhya-ai-quiz-application-gamma.vercel.app/',      // Update with your live demo link if available
     id: 5,
   },
   {
