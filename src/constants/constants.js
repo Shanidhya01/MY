@@ -48,6 +48,15 @@ export const projects = [
     id: 11,
   },
   {
+    title: 'Mern Url Shortener',
+    description: "A full-stack URL shortener application built with the MERN stack (MongoDB, Express.js, React, Node.js). Features include URL shortening, analytics dashboard for tracking clicks and performance, and a responsive design. Ideal for managing and sharing shortened URLs with ease.",
+    image: '/images/12.png',
+    tags: ['MongoDB', 'Express.js', 'React', 'Node.js', 'URL Shortener'],
+    source: 'https://github.com/Shanidhya01/URL-SHORTENER',
+    visit: 'https://url-shortener-frontend-eta-three.vercel.app',
+    id: 12,
+  },
+  {
     title: 'The Solve Space',
     description:  "A modern full-stack web application template built with Next.js, Stackflow, and Appwrite. This project demonstrates seamless navigation and state management using Stackflow, combined with Appwrite's powerful backend-as-a-service features for authentication, database, and storage. Ideal for building scalable, production-ready SaaS apps with a clean developer experience.",
     image: '/images/1.png',
