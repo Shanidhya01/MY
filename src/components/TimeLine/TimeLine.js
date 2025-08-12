@@ -46,7 +46,8 @@ const Timeline = () => {
     <Section id="about">
       <SectionTitle>About Me</SectionTitle>
       <SectionText>
-        I’m a Computer Science student with a strong interest in cybersecurity, modern web development, and problem-solving using algorithms. I enjoy building responsive and secure applications using React, Next.js, and tools like Tailwind CSS and Clerk for authentication. I'm also skilled in database design, SQL, and exploring how AI can improve user experiences. With a hands-on approach to learning and a passion for tech, I’m always working on new projects and sharpening my skills.
+        {/* I’m a Computer Science student with a strong interest in cybersecurity, modern web development, and problem-solving using algorithms. I enjoy building responsive and secure applications using React, Next.js, and tools like Tailwind CSS and Clerk for authentication. I'm also skilled in database design, SQL, and exploring how AI can improve user experiences. With a hands-on approach to learning and a passion for tech, I’m always working on new projects and sharpening my skills. */}
+        I’m Shanidhya Kumar, a Computer Science (Cyber Security) student and aspiring full-stack developer with a passion for creating secure, scalable, and user-friendly applications. I’ve built projects ranging from AI-driven itinerary planning tools to advanced database systems, working comfortably with technologies like Next.js, Appwrite, MongoDB, SQL, and various APIs. I combine strong foundations in data structures, algorithms, and database management with a curiosity for exploring emerging technologies. Whether it’s solving complex problems or crafting smooth user experiences, I’m always looking for innovative ways to turn ideas into impactful solutions.
       </SectionText>
       <CarouselContainer ref={carouselRef} onScroll={handleScroll}>
         <>

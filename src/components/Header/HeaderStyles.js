@@ -7,46 +7,60 @@ const fadeDown = keyframes`
 `;
 
 export const Container = styled.div`
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 2rem;
-  padding: 1rem;
-  padding-top: 2rem;
+  /* Fixed header */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  --header-h: 80px;
+  height: var(--header-h);
+  z-index: 1200;
 
-  @media ${(props) => props.theme.breakpoints.sm} {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, 60px);
-    grid-column-gap: 0.5rem;
-    grid-row-gap: 0.5rem;
+  /* Center contents vertically */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+
+  padding: 0 clamp(1rem, 2vw, 2.2rem);
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  background: rgba(15,22,36,.78);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  box-shadow: 0 6px 18px -10px rgba(0,0,0,.55);
+
+  @media ${(p)=>p.theme.breakpoints.sm}{
+    --header-h: 100px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: .6rem 1rem;
   }
 `;
 export const Div1 = styled.div`
-  grid-area: 1 / 1 / 2 / 2;
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  @media ${(props) => props.theme.breakpoints.sm} {
-    grid-area: 1 / 1 / 2 / 3;
-  }
+  display:flex;
+  align-items:center;
 `;
-export const Div2 = styled.div`
-  grid-area: 1 / 2 / 2 / 4;
-  display: flex;
-  justify-content: space-around;
-  @media ${(props) => props.theme.breakpoints.sm} {
-    grid-area: 2 / 2 / 3 / 5;
+export const Div2 = styled.ul`
+  display:flex;
+  align-items:center;
+  gap: clamp(1.1rem, .8rem + 1vw, 2rem);
+  list-style:none;
+  margin:0;
+  padding:0;
+  @media ${(p)=>p.theme.breakpoints.sm}{
+    flex-basis:100%;
+    justify-content:center;
+    order:2;
+    flex-wrap:wrap;
+    row-gap:.4rem;
   }
 `;
 export const Div3 = styled.div`
-  grid-area: 1 / 5 / 2 / 6;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  @media ${(props) => props.theme.breakpoints.sm} {
-    align-items: center;
-    grid-area: 1 / 4 / 2 / 6;
+  display:flex;
+  align-items:center;
+  gap:.75rem;
+  @media ${(p)=>p.theme.breakpoints.sm}{
+    order:1;
   }
 `;
 
