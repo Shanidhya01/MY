@@ -39,6 +39,32 @@ export const Boxes = styled.div`
   }
 `;
 
+/* Big Number */
+export const BoxNum = styled.h5`
+  margin:0;
+  font-weight:700;
+  font-size:clamp(2.2rem, 1.9rem + 1.4vw, 3.1rem); /* bigger */
+  line-height:1;
+  letter-spacing:.035em;
+  background:linear-gradient(90deg,#ffffff,#cbd5e1 55%,#93c5fd);
+  -webkit-background-clip:text;
+  color:transparent;
+`;
+
+/* Text */
+export const BoxText = styled.p.attrs({ className: 'box-text' })`
+  margin:0;
+  font-size:clamp(.95rem, .88rem + .5vw, 1.25rem);
+  line-height:1.25;
+  letter-spacing:.02em;
+  font-weight:500;
+  color:rgba(255,255,255,.85);
+  transition:color .45s;
+  @media ${({theme})=>theme.breakpoints.sm}{
+    font-size:clamp(.9rem, .85rem + 1vw, 1.1rem);
+  }
+`;
+
 /* Single Box (reduced size) */
 export const Box = styled.div`
   position:relative;
@@ -96,52 +122,11 @@ export const Box = styled.div`
       0 16px 38px -18px rgba(0,0,0,.70),
       0 0 0 1px rgba(255,255,255,.08) inset;
   }
-  &:hover::before{
-    opacity:1;
-    transform:scale(1);
-  }
-  &:hover::after{
-    opacity:1;
-    animation: sheenMove 1.4s .15s cubic-bezier(.19,1,.22,1);
-  }
 
-  @keyframes sheenMove{
-    0% { transform:skewX(-15deg) translateX(0); }
-    100% { transform:skewX(-15deg) translateX(260%); }
-  }
+  /* Hover text color via class (no JS variable reference) */
+  &:hover .box-text { color:#fff; }
 
   ${noMotion};
-
-  &:hover ${BoxText}{
-    color:#fff;
-  }
-`;
-
-/* Big Number */
-export const BoxNum = styled.h5`
-  margin:0;
-  font-weight:700;
-  font-size:clamp(2.2rem, 1.9rem + 1.4vw, 3.1rem); /* bigger */
-  line-height:1;
-  letter-spacing:.035em;
-  background:linear-gradient(90deg,#ffffff,#cbd5e1 55%,#93c5fd);
-  -webkit-background-clip:text;
-  color:transparent;
-`;
-
-/* Bigger Text */
-export const BoxText = styled.p`
-  margin:0;
-  font-size:clamp(.95rem, .88rem + .5vw, 1.25rem); /* increased */
-  line-height:1.25;
-  letter-spacing:.02em;
-  font-weight:500;
-  color:rgba(255,255,255,.85);
-  ${Box}:hover &{ color:#fff; }
-  @media ${({theme})=>theme.breakpoints.sm}{
-    font-size:.75rem;
-    line-height:1.3;
-  }
 `;
 
 /* Call To Action Wrapper */
