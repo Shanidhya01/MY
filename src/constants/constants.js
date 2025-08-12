@@ -28,6 +28,15 @@ export const projects = [
     id: 2,
   },
   {
+    title: 'README Generator',
+    description: "An interactive README.md generator built with Vite + React + TypeScript, Tailwind (shadcn/ui), and a Supabase Edge Function for optional AI-assisted content. Features structured form inputs, live markdown preview, license & badges, copy/download actions, dark/light mode, and responsive UI.",
+    image: '/images/13.png',
+    tags: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Supabase'],
+    source: 'https://github.com/Shanidhya01/readme-generator',
+    visit: 'https://readme-generator-five-sigma.vercel.app/',
+    id: 10,
+  },
+  {
     title: 'Entertainment Hub',
     description: "A modern entertainment platform built with React and modern web technologies. Features include movie/TV show discovery, real-time search functionality, detailed content information, user ratings and reviews, and personalized watchlists. Designed with a sleek, responsive interface that provides an immersive entertainment browsing experience across all devices.",
     image: '/images/10.png',
