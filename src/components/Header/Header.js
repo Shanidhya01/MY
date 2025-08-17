@@ -47,7 +47,7 @@ const Header = () => {
         <Div1>
           <Link href="/" passHref>
             <BrandLink>
-              <DiCssdeck size="2rem" />
+              <DiCssdeck /> {/* remove size prop so CSS controls it */}
               <span>Shanidhya Kumar</span>
             </BrandLink>
           </Link>

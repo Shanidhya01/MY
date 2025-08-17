@@ -25,7 +25,7 @@ export const Container = styled.div`
   grid-template-areas: "brand nav icons";
   align-items: center;
   gap: 0.75rem;
-  padding: .55rem clamp(.9rem, 2vw, 1.6rem);
+  padding: 1rem clamp(.9rem, 2vw, 1.6rem);
 
   @media ${(p) => p.theme.breakpoints.sm} {
     /* Phone: menu | brand | icons */
@@ -70,7 +70,7 @@ export const Div3 = styled.div`
 `;
 
 export const NavLink = styled.a`
-  font-size: 1rem;
+  font-size: 1.3rem;
   letter-spacing: .14em;
   text-transform: uppercase;
   font-weight: 600;
@@ -96,12 +96,19 @@ export const NavLink = styled.a`
 export const SocialIcons = styled.a`
   color:#fff;
   border-radius:12px;
-  padding:8px;
-  font-size:1.2rem;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width: 44px;              
+  height: 44px;
+  padding: 0;
   transition:.25s;
+  & > svg { width: 24px; height: 24px; }  /* icon size */
   &:hover{ background-color:#212d45; transform:translateY(-2px); }
+
   @media ${(p)=>p.theme.breakpoints.sm}{
-    padding:6px; font-size:1.1rem;
+    width: 40px; height: 40px;           /* phone */
+    & > svg { width: 22px; height: 22px; }
   }
 `;
 
@@ -177,13 +184,23 @@ export const HeaderSpacer = styled.div`
 
 /* Optional: brand link styling to prevent wrapping */
 export const BrandLink = styled.a`
-  display:flex; align-items:center; gap:8px;
-  color:#fff; text-decoration:none; white-space:nowrap;
-  font-weight:600; font-size:1.1rem;
-  span{ white-space:nowrap; }
+  display:flex; align-items:center; gap:10px;
+  color:#fff; text-decoration:none;
+  font-weight:700;
+  line-height:1;
+  min-width:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+
+  /* Match SocialIcons: 24px desktop */
+  font-size: 1.5rem;
+  & > svg { width: 26px; height: 26px; }
+
   @media ${(p)=>p.theme.breakpoints.sm}{
-    font-size:1rem;
+    /* Match SocialIcons: 22px phone */
+    font-size: 1.375rem;
+    & > svg { width: 22px; height: 22px; }
   }
+
+  span{ white-space:nowrap; }
 `;
 
 export const ContactDropDown = styled.button`

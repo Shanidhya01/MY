@@ -124,8 +124,11 @@ export const projects = [
 ];
 
 export const TimeLineData = [
-  { year: 2024, text: 'Started my journey', },
-  { year: 2024, text: 'Worked on my first project', },
-  { year: 2024, text: 'Learned React and built several projects', },
-  { year: 2025, text: 'Explored backend technologies and built full-stack applications', },
+  { year: 2023, text: "Started B.E. in Computer Science (IoT & Cyber Security) at DSCE" },
+  { year: 2024, text: "Began solving algorithmic problems on LeetCode and participated in contests" },
+  { year: 2024, text: "Built first web projects like Quiz App, Weather App, and small games in Python" },
+  { year: 2024, text: "Developed advanced React projects including AI ChatBot, Expense Tracker, and Victoria AI Assistant" },
+  { year: 2024, text: "Explored full-stack development with Next.js, Appwrite, Express.js, and MongoDB" },
+  { year: 2025, text: "Created large-scale applications like StackFlow (Q&A App), Cloudinary SaaS, and Video Calling WebApp" },
+  { year: 2025, text: "Focused on backend integration, authentication, and database management (SQL, MongoDB, Prisma, NeonDB)" },
 ];

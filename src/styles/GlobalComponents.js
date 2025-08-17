@@ -2,10 +2,10 @@ import styled, { css } from 'styled-components';
 
 export const SectionDivider = styled.hr`
   /* Variants (transient props so nothing leaks to DOM):
-     $full: full-width section separator
-     $center: center the short accent variant
-     $thick: slightly thicker line
-     $animate: slow gradient motion
+      $full: full-width section separator
+      $center: center the short accent variant
+      $thick: slightly thicker line
+      $animate: slow gradient motion
   */
   --h: ${({ $thick }) => ($thick ? '3px' : '2px')};
   border: 0;
@@ -51,3 +51,5 @@ export const SectionDivider = styled.hr`
     100% { background-position: 300% 0; }
   }
 `;
+
+export * from './GlobalComponents/index';

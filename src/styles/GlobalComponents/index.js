@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled, { css } from 'styled-components';
 
 export const Section = styled.section`
   display: ${(props) => props.grid ? "grid" : "flex" };
@@ -77,20 +77,16 @@ export const SectionText = styled.p`
 `
 
 export const SectionDivider = styled.hr`
-  /* New variants (use transient props): $full, $center, $thick, $animate
-     Backward-compat: supports existing props: colorAlt, divider */
+  /* Variants: $full, $center, $thick, $animate */
   --h: ${({ $thick }) => ($thick ? '3px' : '2px')};
   border: 0;
   height: var(--h);
-  width: ${({ $full, divider }) => ($full || divider ? '100%' : '64px')};
-  margin: ${({ $full, divider }) => ($full || divider ? '48px 0' : '24px 0 32px')};
-  background: ${({ colorAlt }) =>
-    colorAlt
-      ? 'linear-gradient(270deg, #F46737 0%, #945DD6 100%)'
-      : 'linear-gradient(270deg, #13ADC7 0%, #945DD6 100%)'};
+  width: ${({ $full }) => ($full ? '100%' : '72px')};
+  margin: ${({ $full }) => ($full ? '48px 0' : '24px 0 32px')};
+  background: linear-gradient(90deg, #a78bfa, #22d3ee, #34d399, #fbbf24);
   background-size: 300% 100%;
   border-radius: 999px;
-  opacity: .7;
+  opacity: .6;
   position: relative;
   transition: opacity .3s ease;
 
@@ -103,7 +99,6 @@ export const SectionDivider = styled.hr`
     animation: dividerShift 12s linear infinite;
   `}
 
-  /* soft glow */
   &::after{
     content:'';
     position:absolute; left:0; right:0; top:50%;
@@ -116,9 +111,9 @@ export const SectionDivider = styled.hr`
   }
 
   @media ${({ theme }) => theme.breakpoints.sm}{
-    margin: ${({ $full, divider }) => ($full || divider ? '28px 0' : '18px 0 24px')};
-    width: ${({ $full, divider }) => ($full || divider ? '100%' : '48px')};
-    opacity: .8;
+    margin: ${({ $full }) => ($full ? '28px 0' : '18px 0 24px')};
+    width: ${({ $full }) => ($full ? '100%' : '56px')};
+    opacity: .72;
   }
 
   @keyframes dividerShift {
