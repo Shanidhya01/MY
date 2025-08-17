@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const Section = styled.section`
   display: ${(props) => props.grid ? "grid" : "flex" };
@@ -76,26 +76,54 @@ export const SectionText = styled.p`
   }
 `
 
-export const SectionDivider = styled.div`
+export const SectionDivider = styled.hr`
+  /* New variants (use transient props): $full, $center, $thick, $animate
+     Backward-compat: supports existing props: colorAlt, divider */
+  --h: ${({ $thick }) => ($thick ? '3px' : '2px')};
+  border: 0;
+  height: var(--h);
+  width: ${({ $full, divider }) => ($full || divider ? '100%' : '64px')};
+  margin: ${({ $full, divider }) => ($full || divider ? '48px 0' : '24px 0 32px')};
+  background: ${({ colorAlt }) =>
+    colorAlt
+      ? 'linear-gradient(270deg, #F46737 0%, #945DD6 100%)'
+      : 'linear-gradient(270deg, #13ADC7 0%, #945DD6 100%)'};
+  background-size: 300% 100%;
+  border-radius: 999px;
+  opacity: .7;
+  position: relative;
+  transition: opacity .3s ease;
 
-  width: 64px;
-  height: 6px;
-  border-radius: 10px;
-  background-color: #fff;
-  background: ${(props) => props.colorAlt ? 
-    'linear-gradient(270deg, #F46737 0%, #945DD6 100%)' :
-    'linear-gradient(270deg, #13ADC7 0%, #945DD6 100%)'};
+  ${({ $center, $full }) => (!$full && $center) && css`
+    margin-left: auto;
+    margin-right: auto;
+  `}
 
-    margin: ${(props) => props.divider ? "4rem 0" : "" };
+  ${({ $animate }) => $animate && css`
+    animation: dividerShift 12s linear infinite;
+  `}
 
-  @media ${(props) => props.theme.breakpoints.md} {
-    width: 48px;
-    height: 4px;
+  /* soft glow */
+  &::after{
+    content:'';
+    position:absolute; left:0; right:0; top:50%;
+    height: 14px;
+    transform: translateY(-50%);
+    background: radial-gradient(60% 8px at 50% 50%, rgba(99,102,241,.35), transparent 60%);
+    filter: blur(8px);
+    opacity: .28;
+    pointer-events:none;
   }
 
-  @media ${(props) => props.theme.breakpoints.sm} {
-    width: 32px;
-    height: 2px;
+  @media ${({ theme }) => theme.breakpoints.sm}{
+    margin: ${({ $full, divider }) => ($full || divider ? '28px 0' : '18px 0 24px')};
+    width: ${({ $full, divider }) => ($full || divider ? '100%' : '48px')};
+    opacity: .8;
+  }
+
+  @keyframes dividerShift {
+    0% { background-position: 0% 0; }
+    100% { background-position: 300% 0; }
   }
 `
 export const SectionSubText = styled.p`
