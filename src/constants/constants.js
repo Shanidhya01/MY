@@ -23,7 +23,7 @@ export const projects = [
     image: '/images/14.png',
     tags: ['React', 'Vite', 'Node.js', 'Express', 'Socket.io', 'MongoDB', 'Tailwind CSS', 'Cloudinary', 'JWT', 'Realtime'],
     source: 'https://github.com/Shanidhya01/BlinkChat',
-    visit: 'https://blink-chat-front.netlify.app/',
+    visit: 'https://blinkchat-e6mf.onrender.com/',
     id: 13,
   },
   {
