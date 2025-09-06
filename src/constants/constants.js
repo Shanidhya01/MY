@@ -18,6 +18,15 @@ export const projects = [
     id: 1,
   },
   {
+    title: 'BlinkChat',
+    description: "A real-time chat application with a React + Vite frontend and a Node/Express backend. Features secure user authentication (JWT/cookies), profile photo upload via Cloudinary, persistent message history in MongoDB, real-time messaging with Socket.io (typing indicators, online users), media uploads, responsive Tailwind CSS UI, and deploy-ready frontend/backend configuration.",
+    image: '/images/14.png',
+    tags: ['React', 'Vite', 'Node.js', 'Express', 'Socket.io', 'MongoDB', 'Tailwind CSS', 'Cloudinary', 'JWT', 'Realtime'],
+    source: 'https://github.com/Shanidhya01/BlinkChat',
+    visit: 'https://blink-chat-backend-silk.vercel.app/',
+    id: 13,
+  },
+  {
     title: 'Victor AI Assistant',
     description: "An advanced AI voice assistant built with React and Google Gemini AI. Features include voice recognition, text-to-speech with female voice synthesis, cyberpunk-themed UI with animated backgrounds, real-time voice commands, and intelligent conversation capabilities. Victor can open websites, provide information, and engage in natural conversations with users.",
     image: '/images/5.png',
