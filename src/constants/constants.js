@@ -27,6 +27,15 @@ export const projects = [
     id: 13,
   },
   {
+    title: 'WriteWave',
+    description: "A modern full-stack blog application built with React, Express.js, and MongoDB. Features include secure JWT authentication, rich text editing with ReactQuill, image upload via Firebase Storage, admin dashboard, comment system, post categorization, and responsive design. Built with Redux for state management and Tailwind CSS for styling, providing a seamless blogging experience for writers and readers.",
+    image: '/images/15.png', 
+    tags: ['React', 'Express.js', 'MongoDB', 'Firebase', 'Redux', 'Tailwind CSS', 'JWT', 'Blog'],
+    source: 'https://github.com/Shanidhya01/WriteWave',
+    visit: 'https://writewave-2.onrender.com/',
+    id: 14,
+  },
+  {
     title: 'Victor AI Assistant',
     description: "An advanced AI voice assistant built with React and Google Gemini AI. Features include voice recognition, text-to-speech with female voice synthesis, cyberpunk-themed UI with animated backgrounds, real-time voice commands, and intelligent conversation capabilities. Victor can open websites, provide information, and engage in natural conversations with users.",
     image: '/images/5.png',
