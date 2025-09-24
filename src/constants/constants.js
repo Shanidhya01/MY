@@ -1,5 +1,13 @@
 export const projects = [
   {
+    title: 'BioTrace',
+    description: "An AI-driven eDNA analysis pipeline for deep-sea biodiversity that minimizes reliance on incomplete reference databases. It uses self-/unsupervised sequence embeddings and clustering to detect, annotate, and estimate abundances of eukaryotic taxa directly from raw reads—optimized for speed, discovery, and dashboard-ready outputs.",
+    image: '/images/16.png',
+    tags: ['Flask', 'Python', 'Machine Learning', 'Backend', 'API'],
+    source: 'https://github.com/Shanidhya01/BioTrace',
+    id: 16,
+  },
+  {
     title: 'Victor AI ChatBot',
     description: "A modern, responsive AI chatbot powered by Google Gemini and built with Next.js and React. Features include real-time chat, dark/light mode, glassmorphism UI, mobile responsiveness, chat history, one-click copy with popup, and seamless Gemini API integration. Designed for beautiful, intelligent conversations.",
     image: '/images/8.png',

@@ -6,19 +6,40 @@ import Technologies from '../components/Technologies/Technologies';
 import Timeline from '../components/TimeLine/TimeLine';
 import { Layout } from '../layout/Layout';
 import { Section } from '../styles/GlobalComponents';
+import SmoothBackground, { backgroundVariants } from '../components/Background/SmoothBackground';
 
 const Home = () => {
   return (
-    <Layout>
-      <Section grid>
-        <Hero />
-        <BgAnimation />
-      </Section>
-      <Projects />
-      <Technologies />
-      <Timeline />
-      <Acomplishments />
-    </Layout>
+    <>
+      <SmoothBackground {...backgroundVariants.hero} />
+      <Layout>
+        {/* Hero Section */}
+        <Section grid id="home">
+          <Hero />
+          <BgAnimation />
+        </Section>
+        
+        {/* Projects Section */}
+        <Section id="projects">
+          <Projects />
+        </Section>
+        
+        {/* Technologies Section */}
+        <Section id="tech">
+          <Technologies />
+        </Section>
+        
+        {/* About/Timeline Section */}
+        <Section id="about">
+          <Timeline />
+        </Section>
+        
+        {/* Accomplishments Section */}
+        <Section id="contact">
+          <Acomplishments />
+        </Section>
+      </Layout>
+    </>
   );
 };
 

@@ -1,12 +1,11 @@
 // next.config.js
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-  swcMinify: true, // Use SWC instead of Babel/Terser
   reactStrictMode: true,
 
-  webpack: (config) => {
-    // Disable source maps for compatibility
-    config.devtool = false;
-    return config;
+  // Configure styled-components for SSR
+  compiler: {
+    styledComponents: true,
   },
 };
 
