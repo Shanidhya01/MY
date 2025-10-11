@@ -68,7 +68,7 @@ export const projects = [
     image: '/images/10.png',
     tags: ['React', 'JavaScript', 'Entertainment', 'Movies', 'API Integration'],
     source: 'https://github.com/Shanidhya01/entertainment-hub',
-    visit: 'https://movie-hub-nu-seven.vercel.app/',
+    visit: 'https://movie-hub-bice-one.vercel.app/',
     // visit: 'https://google.com',
     id: 3,
   },
