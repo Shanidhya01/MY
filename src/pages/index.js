@@ -7,6 +7,7 @@ import Timeline from '../components/TimeLine/TimeLine';
 import { Layout } from '../layout/Layout';
 import { Section } from '../styles/GlobalComponents';
 import SmoothBackground, { backgroundVariants } from '../components/Background/SmoothBackground';
+import Experience from '../components/Experience/Experience';
 
 const Home = () => {
   return (
@@ -27,6 +28,11 @@ const Home = () => {
         {/* Technologies Section */}
         <Section id="tech">
           <Technologies />
+        </Section>
+        
+        {/* Experience Section */}
+        <Section id="experience">
+          <Experience />
         </Section>
         
         {/* About/Timeline Section */}

@@ -48,6 +48,13 @@ const navigationItems = [
     href: '#tech',
     description: 'Skills & tools'
   },
+  {
+    id: 'experience',
+    label: 'Experience',
+    icon: BiBriefcase,
+    href: '#experience',
+    description: 'Professional experience'
+  },
   { 
     id: 'about', 
     label: 'About', 

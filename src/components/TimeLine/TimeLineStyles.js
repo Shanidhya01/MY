@@ -50,7 +50,8 @@ export const CarouselContainer = styled.ul`
   border-radius: 34px;
   ${glass};
   box-shadow: 0 24px 56px -28px rgba(0,0,0,.78), 0 0 0 1px rgba(255,255,255,.06) inset;
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: visible;
   animation: ${riseIn} .85s cubic-bezier(.19,1,.22,1);
   ${noMotion};
 
@@ -65,17 +66,28 @@ export const CarouselContainer = styled.ul`
     pointer-events:none;
   }
 
-  @media ${(p)=>p.theme.breakpoints.sm}{
-    overflow-x:auto;
-    scroll-snap-type:x mandatory;
-    gap:0;
-    background:transparent;
-    padding:0 0 1.4rem;
-    border-radius:0;
-    box-shadow:none;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  &::-webkit-scrollbar {
+    height: 8px;
+    background: transparent;
   }
-  scrollbar-width:none;
-  &::-webkit-scrollbar{display:none;}
+  &::-webkit-scrollbar-thumb {
+    background: rgba(99,102,241,0.18);
+    border-radius: 8px;
+  }
+
+  @media ${(p)=>p.theme.breakpoints.sm}{
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 0;
+    background: transparent;
+    padding: 0 0 1.4rem;
+    border-radius: 0;
+    box-shadow: none;
+    min-width: 100vw;
+    max-width: 100vw;
+  }
 `;
 
 export const CarouselMobileScrollNode = styled.div`

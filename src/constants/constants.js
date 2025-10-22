@@ -149,6 +149,7 @@ export const projects = [
   },
 ];
 
+
 export const TimeLineData = [
   { year: 2023, text: "Started B.E. in Computer Science (IoT & Cyber Security) at DSCE" },
   { year: 2024, text: "Began solving algorithmic problems on LeetCode and participated in contests" },
@@ -157,4 +158,25 @@ export const TimeLineData = [
   { year: 2024, text: "Explored full-stack development with Next.js, Appwrite, Express.js, and MongoDB" },
   { year: 2025, text: "Created large-scale applications like StackFlow (Q&A App), Cloudinary SaaS, and Video Calling WebApp" },
   { year: 2025, text: "Focused on backend integration, authentication, and database management (SQL, MongoDB, Prisma, NeonDB)" },
+];
+
+export const ExperienceData = [
+  {
+    year: '2025-Present',
+    role: 'Frontend Developer',
+    company: 'Tech Innovators Inc.',
+    description: 'Building modern UIs with React/Next.js',
+  },
+  {
+    year: '2023-2025',
+    role: 'Web Development Intern',
+    company: 'Creative Solutions',
+    description: 'Developed landing pages and dashboards',
+  },
+  {
+    year: '2022-2023',
+    role: 'Open Source Contributor',
+    company: 'Various Projects',
+    description: 'Contributed to open source React components',
+  },
 ];
