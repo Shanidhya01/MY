@@ -56,7 +56,7 @@ const accomplishmentsData = [
   },
   { 
     id: 'followers',
-    number: 2, 
+    number: 5, 
     text: 'GitHub Followers',
     icon: AiFillGithub,
     description: 'Developers following my open source journey',
