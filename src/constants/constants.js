@@ -9,6 +9,25 @@ export const projects = [
     id: 16,
   },
   {
+    title: "BookVault",
+    description:
+      "A full-stack Library Management System built with React, Node.js, Express, MongoDB, and Tailwind CSS. Features include user authentication, admin dashboard, book management, borrowing/returning, overdue reminders, waitlists, customizable library rules, book image upload, search/filter/sort, borrow history, fine tracking, and responsive dark/light mode UI.",
+    image: "/images/18.png", // Update this path to your actual image if needed
+    tags: [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Tailwind CSS",
+      "Library",
+      "Authentication",
+      "Admin Dashboard",
+    ],
+    source: "https://github.com/Shanidhya01/BookVault",
+    visit: "https://book-vault-swart.vercel.app/", // Update with your live demo link if available
+    id: 18,
+  },
+  {
     title: "Expense Tracker",
     description:
       "A modern personal finance management platform built with React and Vite. Features include secure user authentication, profile photo upload, responsive expense tracking forms, real-time balance calculations, and intuitive financial categorization. Designed with Tailwind CSS for a clean, mobile-first interface that helps users take control of their personal finances.",
@@ -23,6 +42,25 @@ export const projects = [
     source: "https://github.com/Shanidhya01/expense-tracker",
     visit: "https://expense-tracker-final-omega.vercel.app/",
     id: 1,
+  },
+  {
+    title: "Shoporia",
+    description:
+      "A modern full-stack e-commerce platform built with React, Node.js, Express, and MongoDB. Features include user authentication, product management, shopping cart, order processing, payment integration, admin dashboard, email notifications, and responsive UI. Includes advanced admin controls for products, orders, users, and reviews, with secure JWT authentication and RESTful APIs.",
+    image: "/images/19.png", // Update this path to your actual image if needed
+    tags: [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "E-commerce",
+      "Authentication",
+      "Admin Dashboard",
+      "Payment Integration",
+    ],
+    source: "https://github.com/Shanidhya01/Shoporia",
+    visit: "https://shoporia.onrender.com/", // Update with your live demo link if available
+    id: 19,
   },
   {
     title: "BlinkChat",
@@ -71,7 +109,7 @@ export const projects = [
     image: "/images/17.png",
     tags: ["Next.js", "React", "Tailwind CSS", "Resume", "PDF Export"],
     source: "https://github.com/Shanidhya01/Resume-Builder",
-    visit: "https://resume-builder-theta-three.vercel.app/", 
+    visit: "https://resume-builder-theta-three.vercel.app/",
     id: 17,
   },
   {
