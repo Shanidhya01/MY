@@ -9,7 +9,7 @@ const glowPulse = keyframes`
 /* Grid */
 export const GridContainer = styled.section`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-auto-rows: 1fr;
   gap: 2.4rem;
   padding: 3rem clamp(1.2rem, 2vw, 3rem);
@@ -30,14 +30,12 @@ export const BlogCard = styled.article`
   height: 100%;
   display: flex;
   flex-direction: column;
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(12px) saturate(120%);
-  border-radius: 20px;
-  box-shadow:
-    0 12px 28px -12px rgba(0,0,0,.6),
-    inset 0 0 0 1px rgba(255,255,255,.08);
+  background: rgba(255,255,255,0.03);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px -6px rgba(0,0,0,.18);
   overflow: hidden;
-  transition: transform .55s cubic-bezier(.19,1,.22,1), box-shadow .55s;
+  transition: transform .35s cubic-bezier(.19,1,.22,1), box-shadow .35s;
+  will-change: transform, box-shadow;
 
   /* Glow layers */
   &::after {
@@ -96,14 +94,14 @@ export const Img = styled.img`
   aspect-ratio: 16 / 9;
   object-fit: cover;
   display: block;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  filter: brightness(.95) saturate(.9);
-  transition: transform .9s cubic-bezier(.19,1,.22,1), filter .9s;
-
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  filter: brightness(.97) saturate(.95);
+  transition: transform .5s cubic-bezier(.19,1,.22,1), filter .5s;
+  will-change: transform, filter;
   ${BlogCard}:hover & {
-    transform: scale(1.08);
-    filter: brightness(1.15) saturate(1.15);
+    transform: scale(1.03);
+    filter: brightness(1.05) saturate(1.05);
   }
 `;
 
@@ -119,8 +117,8 @@ export const HeaderThree = styled.h3`
   font-weight: 700;
   letter-spacing: .06em;
   color: #9cc9e3;
-  font-size: clamp(2rem, 1.4rem + 1.8vw, 3rem);
-  line-height: 1.2;
+    font-size: clamp(1.1rem, 0.9rem + 0.7vw, 1.6rem);
+  line-height: 1.15;
 `;
 
 export const Hr = styled.hr`
@@ -138,34 +136,30 @@ export const Intro = styled.div`
   max-width: 640px;
   color: #dce3e7;
   font-family: 'Droid Serif', serif;
-  font-size: 1.08rem;
+    font-size: 0.75rem;
   font-style: italic;
-  line-height: 1.65;
+  line-height: 1.5;
   opacity: .95;
 `;
 
 /* Card text */
 export const CardInfo = styled.p`
   flex: 1 1 auto;
-  padding: 0 2.2rem;
+  padding: 0 1.2rem;
   color: #e4e6e7;
-  font-size: 1.15rem;
-  line-height: 1.8;
+  font-size: 0.8rem;
+  line-height: 1.6;
   text-align: justify;
-  margin: 0 0 1.6rem;
+  margin: 0 0 1rem;
   display: -webkit-box;
   overflow: hidden;
-  -webkit-line-clamp: 8;
+  -webkit-line-clamp: 12;
   -webkit-box-orient: vertical;
   transition: -webkit-line-clamp .5s;
-
-  ${BlogCard}:hover & {
-    -webkit-line-clamp: 40;
-  }
-
+  will-change: opacity;
   @media ${(p) => p.theme.breakpoints.sm} {
-    padding: 0 1.2rem;
-    font-size: 1.05rem;
+    padding: 0 1rem;
+    font-size: 0.9rem;
     line-height: 1.65;
   }
 `;
@@ -181,7 +175,7 @@ export const TagList = styled.ul`
 `;
 
 export const Tag = styled.li`
-  font-size: .95rem;
+  font-size: .8rem;
   letter-spacing: .05em;
   font-weight: 500;
   color: #f0e6e6;
@@ -226,7 +220,7 @@ export const UtilityList = styled.ul`
 
 export const ExternalLinks = styled.a`
   text-decoration: none;
-  font-size: 1.12rem;
+    font-size: 0.92rem;
   font-weight: 600;
   letter-spacing: .05em;
   color: #f2f5f7;

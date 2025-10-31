@@ -138,10 +138,22 @@ const Footer = () => {
   const [currentYear] = useState(new Date().getFullYear());
 
   // Back to top visibility
-  useEffect(() => {
-    const handleScroll = () => {
-      setShowBackToTop(window.scrollY > 500);
+  // Simple throttle utility
+  function throttle(fn, wait) {
+    let lastTime = 0;
+    return function(...args) {
+      const now = Date.now();
+      if (now - lastTime >= wait) {
+        lastTime = now;
+        fn.apply(this, args);
+      }
     };
+  }
+
+  useEffect(() => {
+    const handleScroll = throttle(() => {
+      setShowBackToTop(window.scrollY > 500);
+    }, 100); // Throttle to every 100ms
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);

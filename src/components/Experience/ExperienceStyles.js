@@ -25,7 +25,7 @@ export const ExperienceCell = styled.td`
   padding: 1rem;
   border-bottom: 1px solid var(--border-primary, #333);
   text-align: left;
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: var(--text-primary, #fff);
   font-family: inherit;
   font-weight: 400;

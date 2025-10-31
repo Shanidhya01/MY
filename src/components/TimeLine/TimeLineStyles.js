@@ -226,7 +226,7 @@ export const TimelineNode = styled.i.attrs({ className:'timeline-node' })``;
 export const CarouselItemTitle = styled.h4`
   margin:0 0 .35rem;
   font-weight:600;
-  font-size:clamp(1.15rem, 1rem + .55vw, 1.55rem);
+  font-size:clamp(0.9rem, 0.8rem + .35vw, 1.1rem);
   line-height:1.2;
   letter-spacing:.045em;
   background:linear-gradient(90deg,#ffffff,#e2e8f0 55%,#93c5fd);
@@ -258,7 +258,7 @@ export const CarouselItemTitle = styled.h4`
 /* ================================= Body Text ================================= */
 export const CarouselItemText = styled.p`
   margin:0;
-  font-size:.95rem;
+  font-size:.8rem;
   line-height:1.58;
   letter-spacing:.02em;
   color:rgba(255,255,255,.8);

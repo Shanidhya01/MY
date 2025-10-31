@@ -201,7 +201,7 @@ export const BrandLink = styled.a`
   text-decoration: none;
   font-weight: 700;
   line-height: 1;
-  font-size: 1.3rem;
+  font-size: 1.05rem;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 8px;
   padding: 6px 8px;
@@ -293,7 +293,7 @@ export const Div2 = styled.ul`
 `;
 
 export const NavLink = styled.a`
-  font-size: 0.95rem;
+  font-size: 0.8rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   font-weight: 600;
@@ -609,7 +609,7 @@ export const MobileList = styled.ul`
   a {
     display: block;
     padding: 0.8rem 1rem;
-    font-size: 0.95rem;
+    font-size: 0.8rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.9);
@@ -682,7 +682,7 @@ export const ContactDropDown = styled.button`
   display: flex;
   align-items: center;
   background: none;
-  font-size: 0.95rem;
+  font-size: 0.8rem;
   line-height: 1;
   color: rgba(255, 255, 255, 0.85);
   cursor: pointer;
@@ -736,7 +736,7 @@ export const NotificationBadge = styled.span`
   right: -2px;
   background: linear-gradient(135deg, #ef4444, #dc2626);
   color: white;
-  font-size: 0.7rem;
+  font-size: 0.6rem;
   font-weight: 600;
   padding: 1px 4px;
   border-radius: 8px;

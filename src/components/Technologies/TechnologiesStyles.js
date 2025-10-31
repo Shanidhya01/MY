@@ -116,7 +116,7 @@ export const ListContainer = styled.div`
 
 export const ListTitle = styled.h4`
   font-weight: 700;
-  font-size: 28px;
+  font-size: 20px;
   line-height: 32px;
   letter-spacing: 0.02em;
   color: #fff;
@@ -140,7 +140,7 @@ export const ListTitle = styled.h4`
 `;
 
 export const ListParagraph = styled.p`
-  font-size: 18px;
+  font-size: 13px;
   line-height: 30px;
   color: rgba(255, 255, 255, 0.75);
   transition: color 0.3s ease;

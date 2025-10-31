@@ -128,7 +128,7 @@ export const TitleWrapper = styled.h1`
   margin: 0;
   font-weight: 700;
   line-height: 1.05;
-  font-size: clamp(2.4rem, 2rem + 2.4vw, 4.2rem);
+  font-size: clamp(1.6rem, 1.2rem + 1.2vw, 2.6rem);
   display: flex;
   flex-wrap: wrap;
   gap: .7rem .8rem;

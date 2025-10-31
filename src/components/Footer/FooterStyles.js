@@ -99,7 +99,7 @@ export const LinkColumn = styled.div`
 export const LinkTitle = styled.h4`
   font-style: normal;
   font-weight: 600;
-  font-size: 1.125rem;
+  font-size: 0.95rem;
   line-height: 1.5;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.9);
@@ -132,7 +132,7 @@ export const LinkItem = styled.a`
   color: rgba(255, 255, 255, 0.75);
   text-decoration: none;
   margin-bottom: 0.75rem;
-  font-size: 0.95rem;
+  font-size: 0.8rem;
   line-height: 1.4;
   cursor: pointer;
   position: relative;
@@ -244,7 +244,7 @@ export const Slogan = styled.p`
   color: rgba(255, 255, 255, 0.65);
   margin-bottom: 0;
   margin-left: 1rem;
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   font-style: italic;
   max-width: 300px;
   
@@ -278,7 +278,7 @@ export const SocialIcons = styled.div`
   color: white;
   border-radius: 50px;
   padding: 8px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -301,7 +301,7 @@ export const SocialIcons = styled.div`
 
 export const Copyright = styled.p`
   color: rgba(255, 255, 255, 0.6);
-  font-size: 0.85rem;
+  font-size: 0.7rem;
   margin-top: 2rem;
   padding-top: 1rem;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -492,13 +492,13 @@ export const NewsletterContainer = styled.div`
 export const NewsletterTitle = styled.h5`
   color: rgba(255, 255, 255, 0.9);
   margin-bottom: 0.5rem;
-  font-size: 1rem;
+  font-size: 0.85rem;
   font-weight: 600;
 `;
 
 export const NewsletterDescription = styled.p`
   color: rgba(255, 255, 255, 0.7);
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   margin-bottom: 1rem;
   line-height: 1.5;
 `;
@@ -519,7 +519,7 @@ export const NewsletterInput = styled.input`
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.05);
   color: white;
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   transition: all 0.3s ease;
   
   &::placeholder {

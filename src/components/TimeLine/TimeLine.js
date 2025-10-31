@@ -1,4 +1,15 @@
 import React, { useState, useRef, useEffect } from 'react';
+// Simple throttle utility
+function throttle(fn, wait) {
+  let lastTime = 0;
+  return function(...args) {
+    const now = Date.now();
+    if (now - lastTime >= wait) {
+      lastTime = now;
+      fn.apply(this, args);
+    }
+  };
+}
 
 import { CarouselButton, CarouselButtonDot, CarouselButtons, CarouselContainer, CarouselItem, CarouselItemImg, CarouselItemText, CarouselItemTitle, CarouselMobileScrollNode } from './TimeLineStyles';
 import { Section, SectionDivider, SectionText, SectionTitle } from '../../styles/GlobalComponents';
@@ -24,13 +35,12 @@ const Timeline = () => {
     }
   }
 
-  const handleScroll = () => {
+  const handleScroll = throttle(() => {
     if (carouselRef.current) {
       const index = Math.round((carouselRef.current.scrollLeft / (carouselRef.current.scrollWidth * 0.7)) * TimeLineData.length);
-
       setActiveItem(index);
     }
-  }
+  }, 100);
 
   // snap back to beginning of scroll when window is resized
   // avoids a bug where content is covered up if coming from smaller screen

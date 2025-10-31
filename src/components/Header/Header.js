@@ -1,4 +1,15 @@
 import React, { useLayoutEffect, useRef, useState, useEffect, useCallback } from 'react';
+// Simple throttle utility
+function throttle(fn, wait) {
+  let lastTime = 0;
+  return function(...args) {
+    const now = Date.now();
+    if (now - lastTime >= wait) {
+      lastTime = now;
+      fn.apply(this, args);
+    }
+  };
+}
 import Link from 'next/link';
 import { AiFillGithub, AiFillInstagram, AiFillLinkedin, AiFillMail } from 'react-icons/ai';
 import { DiCssdeck } from 'react-icons/di';
@@ -108,12 +119,10 @@ const Header = () => {
 
   // Enhanced scroll detection with header visibility
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = throttle(() => {
       const currentScrollY = window.scrollY;
-      
       // Header background change
       setScrolled(currentScrollY > 50);
-      
       // Header visibility (hide on scroll down, show on scroll up)
       if (currentScrollY > lastScrollY && currentScrollY > 100) {
         setIsVisible(false);
@@ -121,11 +130,9 @@ const Header = () => {
         setIsVisible(true);
       }
       setLastScrollY(currentScrollY);
-
       // Active section detection
       const sections = navigationItems.map(item => item.id);
       let current = 'home';
-      
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
@@ -136,8 +143,7 @@ const Header = () => {
         }
       }
       setActiveSection(current);
-    };
-
+    }, 100); // Throttle to every 100ms
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollY]);
