@@ -9,10 +9,31 @@ export const projects = [
     id: 16,
   },
   {
+    title: "CodeInsight",
+    description:
+      "An AI-powered code review platform built with React and Node.js. Features include Firebase authentication, Monaco code editor integration, real-time AI code analysis using OpenRouter API, review history management, and secure MongoDB storage. Available as both a web application and VS Code extension for seamless development workflow. Designed with modern UI/UX principles and glass morphism effects for an enhanced developer experience.",
+    image: "/images/20.webp", // You'll need to add this image
+    tags: [
+      "React",
+      "Node.js",
+      "AI/ML",
+      "MongoDB",
+      "Firebase Auth",
+      "Monaco Editor",
+      "VS Code Extension",
+      // "OpenRouter API",
+      "Code Review",
+      "Tailwind CSS",
+    ],
+    source: "https://github.com/Shanidhya01/CodeInSight",
+    visit: "https://code-in-sight.vercel.app/", 
+    id: 2,
+  },
+  {
     title: "BookVault",
     description:
       "A full-stack Library Management System built with React, Node.js, Express, MongoDB, and Tailwind CSS. Features include user authentication, admin dashboard, book management, borrowing/returning, overdue reminders, waitlists, customizable library rules, book image upload, search/filter/sort, borrow history, fine tracking, and responsive dark/light mode UI.",
-    image: "/images/18.webp", // Update this path to your actual image if needed
+    image: "/images/18.webp",
     tags: [
       "React",
       "Node.js",
