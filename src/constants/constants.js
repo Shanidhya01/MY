@@ -83,6 +83,7 @@ export const projects = [
     visit: "https://shoporia.onrender.com/", // Update with your live demo link if available
     id: 19,
   },
+
   {
     title: "BlinkChat",
     description:
@@ -122,6 +123,23 @@ export const projects = [
     source: "https://github.com/Shanidhya01/WriteWave",
     visit: "https://writewave-2.onrender.com/",
     id: 14,
+  },
+  {
+    title: "AlgoFlowX",
+    description:
+      "An interactive algorithms learning platform built with React and Vite. Explore and visualize classic algorithms across categories (Sorting, Searching, Graph, Dynamic Programming, Greedy, Recursion) with step-by-step explanations, code snippets, and performance metrics. Features include global Light/Dark theme with a refined slate palette, cohesive CSS variable system, Tailwind utilities, and responsive UI across all pages.",
+    image: "/images/21.webp",
+    tags: [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "Algorithms",
+      "Dark Mode",
+      "Visualization",
+    ],
+    source: "https://github.com/Shanidhya01/AlgoFlowX",
+    visit: "https://algo-flow-x.vercel.app/",
+    id: 21,
   },
   {
     title: "Resume Builder",
