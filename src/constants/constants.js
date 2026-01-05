@@ -106,6 +106,26 @@ export const projects = [
     id: 13,
   },
   {
+    title: "SecureShare",
+    description:
+      "A full-stack secure file sharing platform with encrypted file storage, time-limited and one-time download links, JWT-based authentication, personal dashboard with file stats, global toasts for feedback, rate limiting, and scheduled cleanup of expired items. Built for simple, safe sharing with a modern UI.",
+    image: "/images/22.webp", 
+    tags: [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "JWT",
+      "File Sharing",
+      "Docker",
+    ],
+    source: "https://github.com/Shanidhya01/SecureShare",
+    visit: "https://secure-share-nine-omega.vercel.app/",
+    id: 22,
+  },
+  {
     title: "WriteWave",
     description:
       "A modern full-stack blog application built with React, Express.js, and MongoDB. Features include secure JWT authentication, rich text editing with ReactQuill, image upload via Firebase Storage, admin dashboard, comment system, post categorization, and responsive design. Built with Redux for state management and Tailwind CSS for styling, providing a seamless blogging experience for writers and readers.",
