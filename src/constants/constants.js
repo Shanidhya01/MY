@@ -80,7 +80,7 @@ export const projects = [
       "Payment Integration",
     ],
     source: "https://github.com/Shanidhya01/Shoporia",
-    visit: "https://shoporia.onrender.com/", // Update with your live demo link if available
+    visit: "https://shoporia.onrender.com/", 
     id: 19,
   },
 

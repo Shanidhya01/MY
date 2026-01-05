@@ -1,67 +1,106 @@
 import React from 'react';
-
-import { BlogCard, CardInfo, ExternalLinks, GridContainer, HeaderThree, Hr, Tag, TagList, TitleContent, UtilityList, Img } from './ProjectsStyles';
+import Link from 'next/link';
 import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
 import { projects } from '../../constants/constants';
 
-const Projects = () => (
-  <Section nopadding id="projects">
-    <SectionDivider />
-    <SectionTitle main>Projects</SectionTitle>
-    {/* Simple Pagination: Show 6 projects per page */}
-    {(() => {
-      const [page, setPage] = React.useState(1);
-      const perPage = 6;
-      const totalPages = Math.ceil(projects.length / perPage);
-      const paginated = projects.slice((page - 1) * perPage, page * perPage);
-      return (
-        <>
-          <GridContainer>
-            {paginated.map((p, i) => (
-              <BlogCard key={p.id || i}>
-                <Img src={p.image} loading="lazy" />
-                <TitleContent>
-                  <HeaderThree title>{p.title}</HeaderThree>
-                  <Hr />
-                </TitleContent>
-                <CardInfo className="card-info">{p.description}</CardInfo>
-                <div>
-                  <TagList>
-                    {p.tags.map((t, i) => (
-                      <Tag key={i}>{t}</Tag>
-                    ))}
-                  </TagList>
-                </div>
-                <UtilityList>
-                  <ExternalLinks href={p.source}>Source</ExternalLinks>
-                  <ExternalLinks href={p.visit}>Live</ExternalLinks>
-                </UtilityList>
-              </BlogCard>
-            ))}
-          </GridContainer>
-          <div style={{ textAlign: 'center', margin: '2rem 0' }}>
-            <button
-              onClick={() => setPage(page - 1)}
-              disabled={page === 1}
-              style={{ marginRight: '1rem', padding: '0.5rem 1.2rem', fontSize: '1rem', borderRadius: '8px', border: 'none', background: '#9cc9e3', color: '#222', cursor: page === 1 ? 'not-allowed' : 'pointer', opacity: page === 1 ? 0.5 : 1 }}
-            >
-              Prev
-            </button>
-            <span style={{ fontWeight: 600, fontSize: '1rem', color: '#9cc9e3' }}>
-              Page {page} of {totalPages}
-            </span>
-            <button
-              onClick={() => setPage(page + 1)}
-              disabled={page === totalPages}
-              style={{ marginLeft: '1rem', padding: '0.5rem 1.2rem', fontSize: '1rem', borderRadius: '8px', border: 'none', background: '#9cc9e3', color: '#222', cursor: page === totalPages ? 'not-allowed' : 'pointer', opacity: page === totalPages ? 0.5 : 1 }}
-            >
-              Next
-            </button>
-          </div>
-        </>
-      );
-    })()}
-  </Section>
-);
+const Projects = () => {
+	const validProjects = projects.filter((p) => p && p.image && p.title && (p.id !== undefined && p.id !== null));
+	return (
+		<Section nopadding id="projects">
+			<SectionDivider $animate $center />
+			<SectionTitle main>Featured Projects</SectionTitle>
+
+			<div style={{ maxWidth: 1400, margin: '0 auto', padding: '2rem 1rem 4rem' }}>
+				<div
+					style={{
+						display: 'grid',
+						gridTemplateColumns: 'repeat(4, 1fr)',
+						gap: '2rem'
+					}}
+				>
+					{validProjects.map((project) => (
+						<div
+							key={project.id}
+							style={{
+								background: 'rgba(30,41,59,0.6)',
+								border: '1px solid rgba(99,102,241,0.2)',
+								borderRadius: 16,
+								overflow: 'hidden'
+							}}
+						>
+							<Link href={`/project/${project.id}`}>
+								<a style={{ display: 'block' }}>
+									<div style={{ position: 'relative', width: '100%', aspectRatio: '1 / 1', overflow: 'hidden' }}>
+										<img
+											src={project.image}
+											alt={project.title}
+											loading="lazy"
+											style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+										/>
+									</div>
+								</a>
+							</Link>
+							<div style={{ padding: '1rem' }}>
+								<Link href={`/project/${project.id}`}>
+									<a style={{ textDecoration: 'none' }}>
+										<h3
+											style={{
+												margin: 0,
+												fontSize: '1.05rem',
+												fontWeight: 700,
+												color: '#e2e8f0'
+											}}
+										>
+											{project.title}
+										</h3>
+									</a>
+								</Link>
+								{/* Source / Live links */}
+								<div style={{ display: 'flex', gap: '0.75rem', marginTop: '0.75rem', flexWrap: 'wrap' }}>
+									{project.source && (
+										<a
+											href={project.source}
+											target="_blank"
+											rel="noopener noreferrer"
+											style={{
+												textDecoration: 'none',
+												fontSize: '0.9rem',
+												fontWeight: 600,
+												color: '#fff',
+												padding: '0.6rem 1rem',
+												borderRadius: 10,
+												background: 'linear-gradient(135deg, #6366f1, #8b5cf6)'
+											}}
+										>
+											Source
+										</a>
+									)}
+									{project.visit && (
+										<a
+											href={project.visit}
+											target="_blank"
+											rel="noopener noreferrer"
+											style={{
+												textDecoration: 'none',
+												fontSize: '0.9rem',
+												fontWeight: 600,
+												color: '#fff',
+												padding: '0.6rem 1rem',
+												borderRadius: 10,
+												background: 'linear-gradient(135deg, #06b6d4, #3b82f6)'
+											}}
+										>
+											Live
+										</a>
+									)}
+								</div>
+							</div>
+						</div>
+					))}
+				</div>
+			</div>
+		</Section>
+	);
+};
 
 export default Projects;
