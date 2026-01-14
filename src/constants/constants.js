@@ -1,11 +1,33 @@
 export const projects = [
   {
+    title: "AXIONYX",
+    description:
+      "A full-stack student productivity and community platform with secure authentication, study resources, assignments, attendance tracking, career tools, support, and real-time chat. Built with a React + Vite + Tailwind frontend and a Node/Express + MongoDB backend, with JWT auth, Firebase integration, and Socket.io for realtime messaging.",
+    image: "/images/23.webp",
+    tags: [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "JWT",
+      "Firebase",
+      "Socket.io",
+      "Full Stack",
+    ],
+    source: "https://github.com/Shanidhya01/AXIONYX",
+    visit: "https://axionyx-gold.vercel.app/",
+    id: 23,
+  },
+  {
     title: "BioTrace",
     description:
       "An AI-driven eDNA analysis pipeline for deep-sea biodiversity that minimizes reliance on incomplete reference databases. It uses self-/unsupervised sequence embeddings and clustering to detect, annotate, and estimate abundances of eukaryotic taxa directly from raw reads—optimized for speed, discovery, and dashboard-ready outputs.",
     image: "/images/16.webp",
     tags: ["Flask", "Python", "Machine Learning", "Backend", "API"],
     source: "https://github.com/Shanidhya01/BioTrace",
+    visit: "",
     id: 16,
   },
   {
