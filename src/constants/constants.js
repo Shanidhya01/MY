@@ -105,6 +105,26 @@ export const projects = [
     visit: "https://shoporia.onrender.com/", 
     id: 19,
   },
+  {
+    title: "Journyzer",
+    description:
+      "A modern travel planning and journaling platform that helps users organize trips, create itineraries, and document experiences. Features include collaborative trip planning, interactive maps, photo uploads, expense tracking, and a beautiful, responsive UI. Built with Next.js, React, Node.js, and MongoDB for a seamless travel experience.",
+    image: "/images/24.webp", 
+    tags: [
+      "Next.js",
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Travel",
+      "Itinerary",
+      "Journaling",
+      "Collaboration",
+      "Responsive UI"
+    ],
+    source: "https://github.com/Shanidhya01/Journyzer",
+    visit: "https://journyzer.vercel.app/", 
+    id: 24,
+  },
 
   {
     title: "BlinkChat",
@@ -193,6 +213,8 @@ export const projects = [
     visit: "https://resume-builder-theta-three.vercel.app/",
     id: 17,
   },
+  
+
   {
     title: "Victor AI ChatBot",
     description:

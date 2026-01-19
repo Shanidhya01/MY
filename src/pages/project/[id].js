@@ -2,6 +2,8 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { Layout } from '../../layout/Layout';
 import { projects } from '../../constants/constants';
+import { IoArrowBackSharp } from "react-icons/io5";
+
 
 const ProjectDetail = () => {
   const router = useRouter();
@@ -49,15 +51,13 @@ const ProjectDetail = () => {
             marginBottom: '1.5rem',
             padding: '0.6rem 1.25rem',
             borderRadius: 10,
-            background: 'linear-gradient(135deg, #6366f1, #8b5cf6)',
+            background: '#0f172a',
+            border: '1px solid white',
             color: '#fff',
             textDecoration: 'none',
             fontWeight: 600
           }}>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-              <polyline points="15 18 9 12 15 6" />
-            </svg>
-            Back
+            <IoArrowBackSharp /> Back 
           </a>
         </Link>
 
