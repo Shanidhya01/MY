@@ -108,7 +108,7 @@ export const projects = [
   {
     title: "Journyzer",
     description:
-      "A modern travel planning and journaling platform that helps users organize trips, create itineraries, and document experiences. Features include collaborative trip planning, interactive maps, photo uploads, expense tracking, and a beautiful, responsive UI. Built with Next.js, React, Node.js, and MongoDB for a seamless travel experience.",
+      "An AI-powered travel planning platform that generates personalized, budget-aware, day-wise itineraries. Features include Firebase auth, saved trips, Google Maps links, server-side PDF export, and a responsive UI. Built with Next.js, React, Node.js, and MongoDB for a seamless travel experience.",
     image: "/images/24.webp", 
     tags: [
       "Next.js",
@@ -124,6 +124,24 @@ export const projects = [
     source: "https://github.com/Shanidhya01/Journyzer",
     visit: "https://journyzer.vercel.app/", 
     id: 24,
+  },
+  {
+    title: "Tracktern",
+    description:
+      "A smart job and internship application tracker for students and early-career professionals. Features include application status tracking, smart reminders with email alerts, AI-powered insights, and a real-time dashboard with charts. Built with Next.js, TypeScript, Tailwind CSS, Firebase auth, and MongoDB.",
+    image: "/images/25.webp",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Firebase",
+      "MongoDB",
+      "Dashboard",
+      "Full Stack",
+    ],
+    source: "https://github.com/Shanidhya01/Tracktern",
+    visit: "https://sk-tracktern.netlify.app",
+    id: 25,
   },
 
   {
