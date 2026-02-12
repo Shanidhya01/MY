@@ -171,9 +171,9 @@ const ShimmerLayer = styled.div`
 /* ============ Main Component ============ */
 const SmoothBackground = ({
   variant = 'hero',
-  animated = true,
-  particles = true,
-  shimmer = true,
+  animated = false,
+  particles = false,
+  shimmer = false,
   className = '',
   children
 }) => {
@@ -196,8 +196,8 @@ export default SmoothBackground;
 export const backgroundVariants = {
   hero: {
     variant: 'hero',
-    animated: true,
-    particles: true,
+    animated: false,
+    particles: false,
     shimmer: true,
   },
   flowing: {

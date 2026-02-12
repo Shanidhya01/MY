@@ -110,12 +110,12 @@ export const Container = styled.div`
   z-index: 1200;
   
   /* Enhanced glassmorphism background */
-  --header-bg: rgba(15, 22, 36, 0.85);
+  --header-bg: rgba(15, 22, 36, 0.92);
   --header-border: rgba(255, 255, 255, 0.12);
   --header-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   background: var(--header-bg);
   border-bottom: 1px solid var(--header-border);
   box-shadow: var(--header-shadow);
@@ -136,7 +136,7 @@ export const Container = styled.div`
   &.scrolled {
     --header-bg: rgba(15, 22, 36, 0.95);
     --header-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(25px) saturate(200%);
+    backdrop-filter: blur(15px);
     border-bottom-color: rgba(255, 255, 255, 0.2);
   }
 

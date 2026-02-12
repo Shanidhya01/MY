@@ -8,8 +8,6 @@ export const ImageContainer = styled.div`
     rgba(79, 108, 176, 0.25) 53.8%, 
     rgba(79, 108, 176, 0) 100%
   );
-  backdrop-filter: blur(12px) saturate(150%);
-  -webkit-backdrop-filter: blur(12px) saturate(150%);
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 32px rgba(0,0,0,0.1);
@@ -21,7 +19,8 @@ export const ImageContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease-in-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform;
 
   &:hover {
     box-shadow: 0 12px 40px rgba(0,0,0,0.15);
@@ -57,26 +56,12 @@ export const MainImage = styled.div`
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     z-index: 2;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    inset: -20px;
-    border-radius: 20px;
-    background: radial-gradient(circle at center, rgba(79,108,176,0.3), transparent 70%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: 1;
+    will-change: transform;
   }
 
   &:hover img {
-    transform: scale(1.03);
+    transform: scale(1.02);
     box-shadow: 0 12px 28px rgba(0,0,0,0.2);
-  }
-
-  &:hover::after {
-    opacity: 1;
   }
 `;
 

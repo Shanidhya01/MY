@@ -31,34 +31,35 @@ import {
   CompanyContainer,
   FooterDivider,
   Copyright,
-  BackToTop
+  BackToTop,
+  GlobalFooterStyles
 } from './FooterStyles';
 
 // Enhanced contact information
 const contactInfo = [
-  {
-    id: 'phone',
-    title: 'Call',
-    icon: AiFillPhone,
-    value: '+91 9905583008',
-    href: 'tel:+919905583008',
-    description: 'Available Mon-Sat'
-  },
   {
     id: 'email',
     title: 'Email',
     icon: AiFillMail,
     value: 'luckykumar0011s@gmail.com',
     href: 'mailto:luckykumar0011s@gmail.com',
-    description: 'I typically respond within 24 hours'
+    description: 'Response within 24 hours'
+  },
+  {
+    id: 'phone',
+    title: 'Phone',
+    icon: AiFillPhone,
+    value: '+91 9905583008',
+    href: 'tel:+919905583008',
+    description: 'Available Mon-Sat, 10 AM - 6 PM'
   },
   {
     id: 'location',
     title: 'Location',
     icon: AiFillEnvironment,
-    value: 'Bengaluru, India',
-    href: 'https://maps.google.com/?q=Bengaluru,India',
-    description: 'Open to remote opportunities worldwide'
+    value: 'Bengaluru, Karnataka',
+    href: 'https://maps.google.com/?q=Bengaluru,Karnataka,India',
+    description: 'Open to remote & relocation'
   }
 ];
 
@@ -98,42 +99,10 @@ const socialLinks = [
   }
 ];
 
-// Quick links for better navigation
-const quickLinks = [
-  {
-    id: 'projects',
-    title: 'My Work',
-    links: [
-      { label: 'Featured Projects', href: '#projects' },
-      { label: 'GitHub Portfolio', href: 'https://github.com/Shanidhya01' },
-      { label: 'Live Demos', href: '#projects' },
-      { label: 'Code Snippets', href: 'https://github.com/Shanidhya01' }
-    ]
-  },
-  {
-    id: 'about',
-    title: 'About Me',
-    links: [
-      { label: 'My Story', href: '#about' },
-      { label: 'Skills & Tech', href: '#tech' },
-      { label: 'Resume/CV', href: '/Shanidhya_Resume.pdf', download: true },
-      { label: 'Experience', href: '#about' }
-    ]
-  },
-  {
-    id: 'resources',
-    title: 'Resources',
-    links: [
-      { label: 'Blog Posts', href: '#blog' },
-      { label: 'Tutorials', href: '#tutorials' },
-      { label: 'Useful Tools', href: '#tools' },
-      { label: 'Reading List', href: '#resources' }
-    ]
-  }
-];
+
 
 const Footer = () => {
-  const [showBackToTop, setShowBackToTop] = useState(false);
+  // const [showBackToTop, setShowBackToTop] = useState(false);
   const [copiedItem, setCopiedItem] = useState(null);
   const [currentYear] = useState(new Date().getFullYear());
 
@@ -150,22 +119,22 @@ const Footer = () => {
     };
   }
 
-  useEffect(() => {
-    const handleScroll = throttle(() => {
-      setShowBackToTop(window.scrollY > 500);
-    }, 100); // Throttle to every 100ms
+  // useEffect(() => {
+  //   const handleScroll = throttle(() => {
+  //     setShowBackToTop(window.scrollY > 500);
+  //   }, 100); // Throttle to every 100ms
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  //   window.addEventListener('scroll', handleScroll, { passive: true });
+  //   return () => window.removeEventListener('scroll', handleScroll);
+  // }, []);
 
   // Smooth scroll to top
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  };
+  // const scrollToTop = () => {
+  //   window.scrollTo({
+  //     top: 0,
+  //     behavior: 'smooth'
+  //   });
+  // };
 
   // Copy to clipboard functionality
   const copyToClipboard = async (text, itemId) => {
@@ -191,45 +160,118 @@ const Footer = () => {
   };
 
   return (
-    <FooterWrapper id="contact">
+    <>
+      <GlobalFooterStyles />
+      <FooterWrapper id="contact">
       {/* Contact Information Section */}
-      <LinkList>
+      <div style={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+        gap: '1.5rem',
+        marginBottom: '3rem'
+      }}>
         {contactInfo.map((contact, index) => (
-          <LinkColumn key={contact.id} style={{ '--delay': index }}>
-            <LinkTitle>
-              <contact.icon style={{ marginRight: '0.5rem', fontSize: '1rem' }} />
+          <div 
+            key={contact.id}
+            style={{
+              padding: '2rem 1.5rem',
+              background: 'rgba(255, 255, 255, 0.03)',
+              border: '1px solid rgba(255, 255, 255, 0.1)',
+              borderRadius: '16px',
+              transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+              position: 'relative',
+              overflow: 'hidden'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = 'rgba(255, 255, 255, 0.05)';
+              e.currentTarget.style.borderColor = 'rgba(99, 102, 241, 0.3)';
+              e.currentTarget.style.transform = 'translateY(-4px)';
+              e.currentTarget.style.boxShadow = '0 12px 32px rgba(0, 0, 0, 0.3)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = 'rgba(255, 255, 255, 0.03)';
+              e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = 'none';
+            }}
+          >
+            {/* Icon circle */}
+            <div style={{
+              width: '56px',
+              height: '56px',
+              borderRadius: '50%',
+              background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.2))',
+              border: '2px solid rgba(99, 102, 241, 0.3)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              marginBottom: '1.25rem',
+              boxShadow: '0 4px 16px rgba(99, 102, 241, 0.2)'
+            }}>
+              <contact.icon size="1.5rem" style={{ color: '#6366f1' }} />
+            </div>
+            
+            <h4 style={{
+              margin: '0 0 0.75rem',
+              fontSize: '0.85rem',
+              fontWeight: '700',
+              textTransform: 'uppercase',
+              letterSpacing: '0.08em',
+              color: 'rgba(255,255,255,0.7)'
+            }}>
               {contact.title}
-            </LinkTitle>
-            <LinkItem 
+            </h4>
+            
+            <a 
               href={contact.href}
               target={contact.href.startsWith('http') ? '_blank' : '_self'}
               rel={contact.href.startsWith('http') ? 'noopener noreferrer' : undefined}
               title={contact.description}
+              style={{
+                fontSize: '1.05rem',
+                fontWeight: '600',
+                color: '#fff',
+                textDecoration: 'none',
+                marginBottom: '0.75rem',
+                display: 'inline-block',
+                transition: 'color 0.2s'
+              }}
+              onMouseEnter={(e) => e.target.style.color = '#6366f1'}
+              onMouseLeave={(e) => e.target.style.color = '#fff'}
             >
               {contact.value}
               {contact.href.startsWith('http') && (
-                <FiExternalLink style={{ marginLeft: '0.5rem', fontSize: '0.8rem', opacity: 0.6 }} />
+                <FiExternalLink style={{ marginLeft: '0.5rem', fontSize: '0.9rem', opacity: 0.7 }} />
               )}
-            </LinkItem>
+            </a>
             
             {/* Copy button for email and phone */}
             {(contact.id === 'email' || contact.id === 'phone') && (
               <button
                 onClick={() => copyToClipboard(contact.value, contact.id)}
                 style={{
-                  background: 'none',
-                  border: 'none',
-                  color: 'rgba(255,255,255,0.6)',
+                  background: 'rgba(99, 102, 241, 0.1)',
+                  border: '1px solid rgba(99, 102, 241, 0.3)',
+                  borderRadius: '8px',
+                  color: '#6366f1',
                   cursor: 'pointer',
                   fontSize: '0.8rem',
+                  fontWeight: '600',
                   display: 'flex',
                   alignItems: 'center',
-                  gap: '0.3rem',
-                  marginTop: '0.5rem',
-                  transition: 'color 0.3s ease'
+                  gap: '0.4rem',
+                  padding: '0.5rem 0.9rem',
+                  marginTop: '0.75rem',
+                  transition: 'all 0.3s ease'
                 }}
-                onMouseOver={(e) => e.target.style.color = 'rgba(255,255,255,0.9)'}
-                onMouseOut={(e) => e.target.style.color = 'rgba(255,255,255,0.6)'}
+                onMouseOver={(e) => {
+                  e.target.style.background = 'rgba(99, 102, 241, 0.2)';
+                  e.target.style.transform = 'translateY(-2px)';
+                }}
+                onMouseOut={(e) => {
+                  e.target.style.background = 'rgba(99, 102, 241, 0.1)';
+                  e.target.style.transform = 'translateY(0)';
+                }}
               >
                 {copiedItem === contact.id ? (
                   <>
@@ -244,82 +286,114 @@ const Footer = () => {
             )}
             
             <p style={{ 
-              color: 'rgba(255,255,255,0.5)', 
-              fontSize: '0.8rem', 
-              margin: '0.5rem 0 0 0',
-              lineHeight: '1.4'
+              color: 'rgba(255,255,255,0.55)', 
+              fontSize: '0.85rem', 
+              margin: '0.75rem 0 0 0',
+              lineHeight: '1.5'
             }}>
               {contact.description}
             </p>
-          </LinkColumn>
+          </div>
         ))}
-      </LinkList>
+      </div>
 
       <FooterDivider />
-
-      {/* Quick Links Section */}
-      <LinkList>
-        {quickLinks.map((section, sectionIndex) => (
-          <LinkColumn key={section.id} style={{ '--delay': sectionIndex + 3 }}>
-            <LinkTitle>{section.title}</LinkTitle>
-            {section.links.map((link, linkIndex) => (
-              <LinkItem
-                key={linkIndex}
-                href={link.href}
-                download={link.download}
-                target={link.href.startsWith('http') ? '_blank' : '_self'}
-                rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                onClick={(e) => {
-                  if (link.href.startsWith('#')) {
-                    e.preventDefault();
-                    handleLinkClick(link.href);
-                  }
-                }}
-              >
-                {link.download && <BiDownload style={{ marginRight: '0.3rem' }} />}
-                {link.label}
-                {link.href.startsWith('http') && (
-                  <FiExternalLink style={{ marginLeft: '0.5rem', fontSize: '0.8rem', opacity: 0.6 }} />
-                )}
-              </LinkItem>
-            ))}
-          </LinkColumn>
-        ))}
-      </LinkList>
-
-      <FooterDivider />
-
       {/* Enhanced Social and Brand Section */}
       <SocialIconsContainer>
         <CompanyContainer>
-          <div className="brand">
-            <DiCssdeck />
-            <h3>Shanidhya Kumar</h3>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
+            <div style={{
+              background: 'linear-gradient(135deg, #6366f1, #8b5cf6)',
+              padding: '12px',
+              borderRadius: '12px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center'
+            }}>
+              <DiCssdeck size="2rem" />
+            </div>
+            <div>
+              <h3 style={{
+                margin: 0,
+                fontSize: '1.5rem',
+                fontWeight: '700',
+                background: 'linear-gradient(135deg, #6366f1, #8b5cf6)',
+                WebkitBackgroundClip: 'text',
+                backgroundClip: 'text',
+                color: 'transparent'
+              }}>Shanidhya Kumar</h3>
+              <p style={{
+                margin: '4px 0 0',
+                fontSize: '0.85rem',
+                color: 'rgba(255,255,255,0.6)'
+              }}>Full Stack Developer</p>
+            </div>
           </div>
-          <Slogan className="typing">
-            Crafting digital experiences that make a difference. Always learning, always building, always innovating.
+          
+          <Slogan>
+            Building scalable web applications with modern technologies. Passionate about clean code, 
+            innovative solutions, and creating exceptional user experiences.
           </Slogan>
           
-          {/* Additional info */}
+          {/* Status badges */}
           <div style={{ 
             display: 'flex', 
             alignItems: 'center', 
-            gap: '1rem', 
-            marginTop: '1rem',
-            flexWrap: 'wrap',
-            fontSize: '0.9rem',
-            color: 'rgba(255,255,255,0.6)'
+            gap: '0.75rem', 
+            marginTop: '1.25rem',
+            flexWrap: 'wrap'
           }}>
-            <span style={{ display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
-              <BiCode /> Full Stack Developer
+            <span style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.4rem',
+              padding: '0.4rem 0.8rem',
+              background: 'rgba(16, 185, 129, 0.1)',
+              border: '1px solid rgba(16, 185, 129, 0.3)',
+              borderRadius: '20px',
+              fontSize: '0.75rem',
+              color: '#10b981',
+              fontWeight: '500'
+            }}>
+              <span style={{
+                width: '6px',
+                height: '6px',
+                background: '#10b981',
+                borderRadius: '50%',
+                animation: 'pulse 2s ease-in-out infinite'
+              }} />
+              Available for Opportunities
             </span>
-            <span style={{ display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
-              <BiCalendar /> Available for opportunities
+            <span style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.4rem',
+              padding: '0.4rem 0.8rem',
+              background: 'rgba(99, 102, 241, 0.1)',
+              border: '1px solid rgba(99, 102, 241, 0.3)',
+              borderRadius: '20px',
+              fontSize: '0.75rem',
+              color: '#6366f1',
+              fontWeight: '500'
+            }}>
+              <BiCode /> MERN Stack
             </span>
           </div>
         </CompanyContainer>
 
-        <SocialContainer>
+        <div style={{ marginTop: '2rem' }}>
+          <h4 style={{
+            textAlign: 'center',
+            fontSize: '1.1rem',
+            fontWeight: '700',
+            color: '#fff',
+            marginBottom: '1.5rem',
+            letterSpacing: '0.05em',
+            textTransform: 'uppercase'
+          }}>
+            Connect With Me
+          </h4>
+          <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', justifyContent: 'center' }}>
           {socialLinks.map((social) => (
             <a
               key={social.platform}
@@ -328,7 +402,6 @@ const Footer = () => {
               rel="noopener noreferrer"
               aria-label={`${social.label} - ${social.stats}`}
               title={`${social.label} - ${social.stats}`}
-              data-platform={social.platform}
               style={{
                 width: '48px',
                 height: '48px',
@@ -341,49 +414,103 @@ const Footer = () => {
                 justifyContent: 'center',
                 color: 'rgba(255, 255, 255, 0.8)',
                 textDecoration: 'none',
-                transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
-                position: 'relative',
-                overflow: 'hidden'
+                transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                cursor: 'pointer'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-4px)';
+                e.currentTarget.style.background = 'rgba(99, 102, 241, 0.15)';
+                e.currentTarget.style.borderColor = 'rgba(99, 102, 241, 0.5)';
+                e.currentTarget.style.boxShadow = '0 8px 25px rgba(99, 102, 241, 0.25)';
+                e.currentTarget.style.color = '#6366f1';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.05)';
+                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+                e.currentTarget.style.boxShadow = 'none';
+                e.currentTarget.style.color = 'rgba(255, 255, 255, 0.8)';
               }}
             >
               <social.icon size="1.5rem" />
             </a>
           ))}
-        </SocialContainer>
+          </div>
+        </div>
       </SocialIconsContainer>
 
       <FooterDivider />
 
       {/* Copyright Section */}
       <Copyright>
-        <p style={{ margin: '0 0 0.5rem 0' }}>
-          © {currentYear} Shanidhya Kumar. Built with{' '}
-          <BiHeart style={{ color: '#ef4444', margin: '0 0.2rem' }} />{' '}
-          using React & Next.js
-        </p>
-        <p style={{ margin: '0', fontSize: '0.8rem', opacity: '0.7' }}>
-          Designed and developed with attention to detail and passion for clean code.{' '}
-          <a 
-            href="https://github.com/Shanidhya01" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            style={{ color: '#6366f1', textDecoration: 'none' }}
-          >
-            View source code
-          </a>
-        </p>
+        <div style={{ 
+          display: 'flex', 
+          justifyContent: 'space-between', 
+          alignItems: 'center',
+          flexWrap: 'wrap',
+          gap: '1rem',
+          padding: '1.5rem 0',
+          borderTop: '1px solid rgba(255, 255, 255, 0.08)'
+        }}>
+          <p style={{ margin: 0, fontSize: '0.85rem' }}>
+            © {currentYear} Shanidhya Kumar. Built with{' '}
+            <BiHeart style={{ color: '#ef4444', margin: '0 0.2rem', verticalAlign: 'middle' }} />{' '}
+            using <strong>React & Next.js</strong>
+          </p>
+          <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap', fontSize: '0.85rem' }}>
+            <a 
+              href="https://github.com/Shanidhya01" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              style={{ 
+                color: 'rgba(255,255,255,0.7)', 
+                textDecoration: 'none',
+                transition: 'color 0.2s'
+              }}
+              onMouseEnter={(e) => e.target.style.color = '#6366f1'}
+              onMouseLeave={(e) => e.target.style.color = 'rgba(255,255,255,0.7)'}
+            >
+              View Source
+            </a>
+            <a 
+              href="#projects" 
+              style={{ 
+                color: 'rgba(255,255,255,0.7)', 
+                textDecoration: 'none',
+                transition: 'color 0.2s'
+              }}
+              onMouseEnter={(e) => e.target.style.color = '#6366f1'}
+              onMouseLeave={(e) => e.target.style.color = 'rgba(255,255,255,0.7)'}
+            >
+              Portfolio
+            </a>
+            <a 
+              href="#tech" 
+              style={{ 
+                color: 'rgba(255,255,255,0.7)', 
+                textDecoration: 'none',
+                transition: 'color 0.2s'
+              }}
+              onMouseEnter={(e) => e.target.style.color = '#6366f1'}
+              onMouseLeave={(e) => e.target.style.color = 'rgba(255,255,255,0.7)'}
+            >
+              Tech Stack
+            </a>
+          </div>
+        </div>
       </Copyright>
 
       {/* Back to Top Button */}
-      <BackToTop
+      {/* <BackToTop
         visible={showBackToTop}
         onClick={scrollToTop}
         aria-label="Scroll back to top"
         title="Back to top"
       >
         <BiChevronUp />
-      </BackToTop>
+      </BackToTop> */}
     </FooterWrapper>
+    </>
   );
 };
 

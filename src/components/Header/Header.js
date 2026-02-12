@@ -67,13 +67,6 @@ const navigationItems = [
     description: 'Professional experience'
   },
   { 
-    id: 'about', 
-    label: 'About', 
-    icon: BiUser,
-    href: '#about',
-    description: 'Learn about me'
-  },
-  { 
     id: 'contact', 
     label: 'Contact', 
     icon: BiPhone,

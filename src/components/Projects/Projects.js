@@ -1,78 +1,72 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
+import { AiOutlineGithub, AiOutlineLink } from 'react-icons/ai';
+import { FiExternalLink, FiCode } from 'react-icons/fi';
 import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
+import { ProjectsContainer, ProjectCard, ProjectImage, ProjectImageOverlay, ProjectContent, ProjectTitle, ProjectDescription, ProjectTechStack, TechTag, ProjectLinks, ProjectLink } from './ProjectsStyles';
 import { projects } from '../../constants/constants';
 
 const Projects = () => {
 	const validProjects = projects.filter((p) => p && p.image && p.title && (p.id !== undefined && p.id !== null));
+	const [hoveredProject, setHoveredProject] = useState(null);
+
 	return (
 		<Section nopadding id="projects">
 			<SectionDivider $animate $center />
 			<SectionTitle main>Featured Projects</SectionTitle>
+			<p style={{
+				textAlign: 'center',
+				color: 'rgba(255,255,255,0.6)',
+				fontSize: '1.1rem',
+				maxWidth: '700px',
+				margin: '-1rem auto 3rem',
+				lineHeight: '1.6'
+			}}>
+				A collection of my best work showcasing modern web development with cutting-edge technologies
+			</p>
 
-			<div style={{ maxWidth: 1400, margin: '0 auto', padding: '2rem 1rem 4rem' }}>
-				<div
-					style={{
-						display: 'grid',
-						gridTemplateColumns: 'repeat(4, 1fr)',
-						gap: '2rem'
-					}}
-				>
-					{validProjects.map((project) => (
-						<div
-							key={project.id}
-							style={{
-								background: 'rgba(30,41,59,0.6)',
-								border: '1px solid rgba(99,102,241,0.2)',
-								borderRadius: 16,
-								overflow: 'hidden'
-							}}
-						>
-							<Link href={`/project/${project.id}`}>
-								<a style={{ display: 'block' }}>
-									<div style={{ position: 'relative', width: '100%', aspectRatio: '1 / 1', overflow: 'hidden' }}>
-										<img
-											src={project.image}
-											alt={project.title}
-											loading="lazy"
-											style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-										/>
-									</div>
-								</a>
-							</Link>
-							<div style={{ padding: '1rem' }}>
-								<Link href={`/project/${project.id}`}>
-									<a style={{ textDecoration: 'none' }}>
-										<h3
-											style={{
-												margin: 0,
-												fontSize: '1.05rem',
-												fontWeight: 700,
-												color: '#e2e8f0'
-											}}
-										>
-											{project.title}
-										</h3>
-									</a>
-								</Link>
-								{/* Source / Live links */}
-								<div style={{ display: 'flex', gap: '0.75rem', marginTop: '0.75rem', flexWrap: 'wrap' }}>
+			<ProjectsContainer>
+				{validProjects.map((project, index) => (
+					<ProjectCard
+						key={project.id}
+						onMouseEnter={() => setHoveredProject(project.id)}
+						onMouseLeave={() => setHoveredProject(null)}
+					>
+						<ProjectImage $isHovered={hoveredProject === project.id}>
+							<img
+								src={project.image}
+								alt={project.title}
+								loading="lazy"
+							/>
+							<ProjectImageOverlay $isHovered={hoveredProject === project.id}>
+								<div style={{
+									display: 'flex',
+									gap: '1rem',
+									flexDirection: 'column',
+									alignItems: 'center'
+								}}>
 									{project.source && (
 										<a
 											href={project.source}
 											target="_blank"
 											rel="noopener noreferrer"
 											style={{
+												display: 'flex',
+												alignItems: 'center',
+												gap: '0.5rem',
+												padding: '0.75rem 1.5rem',
+												background: 'rgba(255, 255, 255, 0.95)',
+												color: '#1e293b',
+												borderRadius: '12px',
+												fontWeight: '600',
 												textDecoration: 'none',
-												fontSize: '0.9rem',
-												fontWeight: 600,
-												color: '#fff',
-												padding: '0.6rem 1rem',
-												borderRadius: 10,
-												background: 'linear-gradient(135deg, #6366f1, #8b5cf6)'
+												transition: 'transform 0.2s',
+												boxShadow: '0 4px 16px rgba(0,0,0,0.2)'
 											}}
+											onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+											onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
 										>
-											Source
+											<AiOutlineGithub size={20} /> View Code
 										</a>
 									)}
 									{project.visit && (
@@ -81,24 +75,63 @@ const Projects = () => {
 											target="_blank"
 											rel="noopener noreferrer"
 											style={{
-												textDecoration: 'none',
-												fontSize: '0.9rem',
-												fontWeight: 600,
+												display: 'flex',
+												alignItems: 'center',
+												gap: '0.5rem',
+												padding: '0.75rem 1.5rem',
+												background: 'linear-gradient(135deg, #6366f1, #8b5cf6)',
 												color: '#fff',
-												padding: '0.6rem 1rem',
-												borderRadius: 10,
-												background: 'linear-gradient(135deg, #06b6d4, #3b82f6)'
+												borderRadius: '12px',
+												fontWeight: '600',
+												textDecoration: 'none',
+												transition: 'transform 0.2s',
+												boxShadow: '0 4px 16px rgba(99, 102, 241, 0.4)'
 											}}
+											onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+											onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
 										>
-											Live
+											<FiExternalLink size={20} /> Live Demo
 										</a>
 									)}
 								</div>
-							</div>
-						</div>
-					))}
-				</div>
-			</div>
+							</ProjectImageOverlay>
+						</ProjectImage>
+
+						<ProjectContent>
+							<Link href={`/project/${project.id}`}>
+								<a style={{ textDecoration: 'none' }}>
+									<ProjectTitle>{project.title}</ProjectTitle>
+								</a>
+							</Link>
+							
+							{project.description && (
+								<ProjectDescription>{project.description}</ProjectDescription>
+							)}
+
+							{project.tags && project.tags.length > 0 && (
+								<ProjectTechStack>
+									{project.tags.slice(0, 4).map((tag, i) => (
+										<TechTag key={i}>{tag}</TechTag>
+									))}
+									{project.tags.length > 4 && (
+										<TechTag style={{ background: 'rgba(255,255,255,0.05)', color: 'rgba(255,255,255,0.5)' }}>
+											+{project.tags.length - 4} more
+										</TechTag>
+									)}
+								</ProjectTechStack>
+							)}
+
+							<ProjectLinks>
+								<Link href={`/project/${project.id}`}>
+									<ProjectLink>
+										<FiCode /> View Details
+									</ProjectLink>
+								</Link>
+							</ProjectLinks>
+						</ProjectContent>
+					</ProjectCard>
+				))}
+			</ProjectsContainer>
 		</Section>
 	);
 };
