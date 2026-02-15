@@ -1,4 +1,96 @@
 export const projects = [
+  // --- AI-Powered & Microservices (Most Complex) ---
+  {
+    title: "BuildScope",
+    description:
+      "An AI-powered microservices platform that converts plain-English software ideas into comprehensive project blueprints. Features include AI blueprint generation via OpenRouter LLM, Firebase authentication (email/password + Google OAuth), full CRUD project management, PDF and Markdown export, dashboard with project stats, and a modern responsive UI. Built with a microservices architecture using an API Gateway pattern with independently deployable services.",
+    image: "/images/26.webp",
+    tags: [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Firebase",
+      "Docker",
+      "Microservices",
+      "AI/ML",
+    ],
+    source: "https://github.com/Shanidhya01/BuildScope",
+    visit: "https://build-scope-delta.vercel.app",
+    id: 26,
+  },
+  {
+    title: "CodeInsight",
+    description:
+      "An AI-powered code review platform built with React and Node.js. Features include Firebase authentication, Monaco code editor integration, real-time AI code analysis using OpenRouter API, review history management, and secure MongoDB storage. Available as both a web application and VS Code extension for seamless development workflow. Designed with modern UI/UX principles and glass morphism effects for an enhanced developer experience.",
+    image: "/images/20.webp",
+    tags: [
+      "React",
+      "Node.js",
+      "AI/ML",
+      "MongoDB",
+      "Firebase Auth",
+      "Monaco Editor",
+      "VS Code Extension",
+      "Code Review",
+      "Tailwind CSS",
+    ],
+    source: "https://github.com/Shanidhya01/CodeInSight",
+    visit: "https://code-in-sight.vercel.app/",
+    id: 2,
+  },
+  {
+    title: "Tracktern",
+    description:
+      "A smart job and internship application tracker for students and early-career professionals. Features include application status tracking, smart reminders with email alerts, AI-powered insights, and a real-time dashboard with charts. Built with Next.js, TypeScript, Tailwind CSS, Firebase auth, and MongoDB.",
+    image: "/images/25.webp",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Firebase",
+      "MongoDB",
+      "Dashboard",
+      "Full Stack",
+    ],
+    source: "https://github.com/Shanidhya01/Tracktern",
+    visit: "https://sk-tracktern.netlify.app",
+    id: 25,
+  },
+  {
+    title: "Journyzer",
+    description:
+      "An AI-powered travel planning platform that generates personalized, budget-aware, day-wise itineraries. Features include Firebase auth, saved trips, Google Maps links, server-side PDF export, and a responsive UI. Built with Next.js, React, Node.js, and MongoDB for a seamless travel experience.",
+    image: "/images/24.webp",
+    tags: [
+      "Next.js",
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Travel",
+      "Itinerary",
+      "Journaling",
+      "Collaboration",
+      "Responsive UI",
+    ],
+    source: "https://github.com/Shanidhya01/Journyzer",
+    visit: "https://journyzer.vercel.app/",
+    id: 24,
+  },
+  {
+    title: "BioTrace",
+    description:
+      "An AI-driven eDNA analysis pipeline for deep-sea biodiversity that minimizes reliance on incomplete reference databases. It uses self-/unsupervised sequence embeddings and clustering to detect, annotate, and estimate abundances of eukaryotic taxa directly from raw reads—optimized for speed, discovery, and dashboard-ready outputs.",
+    image: "/images/16.webp",
+    tags: ["Flask", "Python", "Machine Learning", "Backend", "API"],
+    source: "https://github.com/Shanidhya01/BioTrace",
+    visit: "",
+    id: 16,
+  },
+
+  // --- Full-Stack Applications ---
   {
     title: "AXIONYX",
     description:
@@ -21,35 +113,43 @@ export const projects = [
     id: 23,
   },
   {
-    title: "BioTrace",
+    title: "Shoporia",
     description:
-      "An AI-driven eDNA analysis pipeline for deep-sea biodiversity that minimizes reliance on incomplete reference databases. It uses self-/unsupervised sequence embeddings and clustering to detect, annotate, and estimate abundances of eukaryotic taxa directly from raw reads—optimized for speed, discovery, and dashboard-ready outputs.",
-    image: "/images/16.webp",
-    tags: ["Flask", "Python", "Machine Learning", "Backend", "API"],
-    source: "https://github.com/Shanidhya01/BioTrace",
-    visit: "",
-    id: 16,
-  },
-  {
-    title: "CodeInsight",
-    description:
-      "An AI-powered code review platform built with React and Node.js. Features include Firebase authentication, Monaco code editor integration, real-time AI code analysis using OpenRouter API, review history management, and secure MongoDB storage. Available as both a web application and VS Code extension for seamless development workflow. Designed with modern UI/UX principles and glass morphism effects for an enhanced developer experience.",
-    image: "/images/20.webp", // You'll need to add this image
+      "A modern full-stack e-commerce platform built with React, Node.js, Express, and MongoDB. Features include user authentication, product management, shopping cart, order processing, payment integration, admin dashboard, email notifications, and responsive UI. Includes advanced admin controls for products, orders, users, and reviews, with secure JWT authentication and RESTful APIs.",
+    image: "/images/19.webp",
     tags: [
       "React",
       "Node.js",
-      "AI/ML",
+      "Express",
       "MongoDB",
-      "Firebase Auth",
-      "Monaco Editor",
-      "VS Code Extension",
-      // "OpenRouter API",
-      "Code Review",
-      "Tailwind CSS",
+      "E-commerce",
+      "Authentication",
+      "Admin Dashboard",
+      "Payment Integration",
     ],
-    source: "https://github.com/Shanidhya01/CodeInSight",
-    visit: "https://code-in-sight.vercel.app/", 
-    id: 2,
+    source: "https://github.com/Shanidhya01/Shoporia",
+    visit: "https://shoporia.onrender.com/",
+    id: 19,
+  },
+  {
+    title: "SecureShare",
+    description:
+      "A full-stack secure file sharing platform with encrypted file storage, time-limited and one-time download links, JWT-based authentication, personal dashboard with file stats, global toasts for feedback, rate limiting, and scheduled cleanup of expired items. Built for simple, safe sharing with a modern UI.",
+    image: "/images/22.webp",
+    tags: [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "JWT",
+      "File Sharing",
+      "Docker",
+    ],
+    source: "https://github.com/Shanidhya01/SecureShare",
+    visit: "https://secure-share-nine-omega.vercel.app/",
+    id: 22,
   },
   {
     title: "BookVault",
@@ -67,83 +167,9 @@ export const projects = [
       "Admin Dashboard",
     ],
     source: "https://github.com/Shanidhya01/BookVault",
-    visit: "https://book-vault-swart.vercel.app/", // Update with your live demo link if available
+    visit: "https://book-vault-swart.vercel.app/",
     id: 18,
   },
-  {
-    title: "Expense Tracker",
-    description:
-      "A modern personal finance management platform built with React and Vite. Features include secure user authentication, profile photo upload, responsive expense tracking forms, real-time balance calculations, and intuitive financial categorization. Designed with Tailwind CSS for a clean, mobile-first interface that helps users take control of their personal finances.",
-    image: "/images/9.webp",
-    tags: [
-      "React",
-      "Vite",
-      "Tailwind CSS",
-      "Personal Finance",
-      "Authentication",
-    ],
-    source: "https://github.com/Shanidhya01/expense-tracker",
-    visit: "https://expense-tracker-final-omega.vercel.app/",
-    id: 1,
-  },
-  {
-    title: "Shoporia",
-    description:
-      "A modern full-stack e-commerce platform built with React, Node.js, Express, and MongoDB. Features include user authentication, product management, shopping cart, order processing, payment integration, admin dashboard, email notifications, and responsive UI. Includes advanced admin controls for products, orders, users, and reviews, with secure JWT authentication and RESTful APIs.",
-    image: "/images/19.webp", // Update this path to your actual image if needed
-    tags: [
-      "React",
-      "Node.js",
-      "Express",
-      "MongoDB",
-      "E-commerce",
-      "Authentication",
-      "Admin Dashboard",
-      "Payment Integration",
-    ],
-    source: "https://github.com/Shanidhya01/Shoporia",
-    visit: "https://shoporia.onrender.com/", 
-    id: 19,
-  },
-  {
-    title: "Journyzer",
-    description:
-      "An AI-powered travel planning platform that generates personalized, budget-aware, day-wise itineraries. Features include Firebase auth, saved trips, Google Maps links, server-side PDF export, and a responsive UI. Built with Next.js, React, Node.js, and MongoDB for a seamless travel experience.",
-    image: "/images/24.webp", 
-    tags: [
-      "Next.js",
-      "React",
-      "Node.js",
-      "MongoDB",
-      "Travel",
-      "Itinerary",
-      "Journaling",
-      "Collaboration",
-      "Responsive UI"
-    ],
-    source: "https://github.com/Shanidhya01/Journyzer",
-    visit: "https://journyzer.vercel.app/", 
-    id: 24,
-  },
-  {
-    title: "Tracktern",
-    description:
-      "A smart job and internship application tracker for students and early-career professionals. Features include application status tracking, smart reminders with email alerts, AI-powered insights, and a real-time dashboard with charts. Built with Next.js, TypeScript, Tailwind CSS, Firebase auth, and MongoDB.",
-    image: "/images/25.webp",
-    tags: [
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "Firebase",
-      "MongoDB",
-      "Dashboard",
-      "Full Stack",
-    ],
-    source: "https://github.com/Shanidhya01/Tracktern",
-    visit: "https://sk-tracktern.netlify.app",
-    id: 25,
-  },
-
   {
     title: "BlinkChat",
     description:
@@ -166,26 +192,6 @@ export const projects = [
     id: 13,
   },
   {
-    title: "SecureShare",
-    description:
-      "A full-stack secure file sharing platform with encrypted file storage, time-limited and one-time download links, JWT-based authentication, personal dashboard with file stats, global toasts for feedback, rate limiting, and scheduled cleanup of expired items. Built for simple, safe sharing with a modern UI.",
-    image: "/images/22.webp", 
-    tags: [
-      "Next.js",
-      "React",
-      "Tailwind CSS",
-      "Node.js",
-      "Express",
-      "MongoDB",
-      "JWT",
-      "File Sharing",
-      "Docker",
-    ],
-    source: "https://github.com/Shanidhya01/SecureShare",
-    visit: "https://secure-share-nine-omega.vercel.app/",
-    id: 22,
-  },
-  {
     title: "WriteWave",
     description:
       "A modern full-stack blog application built with React, Express.js, and MongoDB. Features include secure JWT authentication, rich text editing with ReactQuill, image upload via Firebase Storage, admin dashboard, comment system, post categorization, and responsive design. Built with Redux for state management and Tailwind CSS for styling, providing a seamless blogging experience for writers and readers.",
@@ -204,6 +210,44 @@ export const projects = [
     visit: "https://writewave-2.onrender.com/",
     id: 14,
   },
+  {
+    title: "Expense Tracker",
+    description:
+      "A modern personal finance management platform built with React and Vite. Features include secure user authentication, profile photo upload, responsive expense tracking forms, real-time balance calculations, and intuitive financial categorization. Designed with Tailwind CSS for a clean, mobile-first interface that helps users take control of their personal finances.",
+    image: "/images/9.webp",
+    tags: [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "Personal Finance",
+      "Authentication",
+    ],
+    source: "https://github.com/Shanidhya01/expense-tracker",
+    visit: "https://expense-tracker-final-omega.vercel.app/",
+    id: 1,
+  },
+  {
+    title: "Mern Url Shortener",
+    description:
+      "A full-stack URL shortener application built with the MERN stack (MongoDB, Express.js, React, Node.js). Features include URL shortening, analytics dashboard for tracking clicks and performance, and a responsive design. Ideal for managing and sharing shortened URLs with ease.",
+    image: "/images/12.webp",
+    tags: ["MongoDB", "Express.js", "React", "Node.js", "URL Shortener"],
+    source: "https://github.com/Shanidhya01/URL-SHORTENER",
+    visit: "https://url-shortener-frontend-eta-three.vercel.app",
+    id: 12,
+  },
+  {
+    title: "PassOP Password Manager",
+    description:
+      "A simple and modern password manager built with React (Vite), Node.js, Express, and MongoDB. PassOP lets you securely store, view, copy, edit, and delete your passwords for different websites. Features include a responsive UI, toast notifications, and a clean, minimal design.",
+    image: "/images/3.webp",
+    tags: ["React", "Node.js", "Express", "MongoDB", "Vite", "Tailwind CSS"],
+    source: "https://github.com/Shanidhya01/Password-Manager",
+    visit: "https://github.com/Shanidhya01/Password-Manager",
+    id: 8,
+  },
+
+  // --- Modern Web Apps & Tools ---
   {
     title: "AlgoFlowX",
     description:
@@ -231,8 +275,6 @@ export const projects = [
     visit: "https://resume-builder-theta-three.vercel.app/",
     id: 17,
   },
-  
-
   {
     title: "Victor AI ChatBot",
     description:
@@ -256,7 +298,6 @@ export const projects = [
     ],
     source: "https://github.com/Shanidhya01/VOICE-ASSISTANT",
     visit: "https://voice-assistant-beta-rouge.vercel.app/",
-    // visit: 'https://google.com',
     id: 2,
   },
   {
@@ -268,17 +309,6 @@ export const projects = [
     source: "https://github.com/Shanidhya01/readme-generator",
     visit: "https://readme-generator-five-sigma.vercel.app/",
     id: 10,
-  },
-  {
-    title: "Entertainment Hub",
-    description:
-      "A modern entertainment platform built with React and modern web technologies. Features include movie/TV show discovery, real-time search functionality, detailed content information, user ratings and reviews, and personalized watchlists. Designed with a sleek, responsive interface that provides an immersive entertainment browsing experience across all devices.",
-    image: "/images/10.webp",
-    tags: ["React", "JavaScript", "Entertainment", "Movies", "API Integration"],
-    source: "https://github.com/Shanidhya01/entertainment-hub",
-    visit: "https://movie-hub-bice-one.vercel.app/",
-    // visit: 'https://google.com',
-    id: 3,
   },
   {
     title: "Video Calling WebApp",
@@ -294,49 +324,17 @@ export const projects = [
     ],
     source: "https://github.com/Shanidhya01/VIDEO-CALLING",
     visit: "https://video-calling-sk.vercel.app/",
-    // visit: 'https://google.com',
     id: 11,
   },
   {
-    title: "Mern Url Shortener",
+    title: "Entertainment Hub",
     description:
-      "A full-stack URL shortener application built with the MERN stack (MongoDB, Express.js, React, Node.js). Features include URL shortening, analytics dashboard for tracking clicks and performance, and a responsive design. Ideal for managing and sharing shortened URLs with ease.",
-    image: "/images/12.webp",
-    tags: ["MongoDB", "Express.js", "React", "Node.js", "URL Shortener"],
-    source: "https://github.com/Shanidhya01/URL-SHORTENER",
-    visit: "https://url-shortener-frontend-eta-three.vercel.app",
-    id: 12,
-  },
-  {
-    title: "The Solve Space",
-    description:
-      "A modern full-stack web application template built with Next.js, Stackflow, and Appwrite. This project demonstrates seamless navigation and state management using Stackflow, combined with Appwrite's powerful backend-as-a-service features for authentication, database, and storage. Ideal for building scalable, production-ready SaaS apps with a clean developer experience.",
-    image: "/images/1.webp",
-    tags: ["Next.js", "Stackflow", "Appwrite", "TypeScript"],
-    source: "https://github.com/Shanidhya01/StackFlow-Appwrite",
-    visit: "https://github.com/Shanidhya01/StackFlow-Appwrite",
-    // visit: 'https://google.com',
-    id: 4,
-  },
-  {
-    title: "Quiz App",
-    description:
-      "A simple and interactive Quiz App built with HTML, CSS, and JavaScript. Features include multiple-choice questions, instant feedback, score tracking, and a responsive user interface. Designed for learning and testing knowledge in a fun way.",
-    image: "/images/6.webp", // Update this path to your quiz app image if available
-    tags: ["JavaScript", "HTML", "CSS", "Frontend", "Quiz"],
-    source: "https://github.com/Shanidhya01/Ai-Quiz-Application", // Update with your actual repository URL if available
-    visit: "https://shanidhya-ai-quiz-application-gamma.vercel.app/", // Update with your live demo link if available
-    id: 5,
-  },
-  {
-    title: "Weather App",
-    description:
-      "A responsive Weather App built with HTML, CSS, and JavaScript. Features include real-time weather data fetching, location-based search, dynamic weather icons, and a clean, user-friendly interface. Designed to provide accurate weather updates for any city worldwide.",
-    image: "/images/7.webp", // Update this path if you have a screenshot
-    tags: ["JavaScript", "HTML", "CSS", "Frontend", "Weather"],
-    source: "https://github.com/Shanidhya01/Weather-app",
-    visit: "https://weather-app-byshanidhya.vercel.app/",
-    id: 6,
+      "A modern entertainment platform built with React and modern web technologies. Features include movie/TV show discovery, real-time search functionality, detailed content information, user ratings and reviews, and personalized watchlists. Designed with a sleek, responsive interface that provides an immersive entertainment browsing experience across all devices.",
+    image: "/images/10.webp",
+    tags: ["React", "JavaScript", "Entertainment", "Movies", "API Integration"],
+    source: "https://github.com/Shanidhya01/entertainment-hub",
+    visit: "https://movie-hub-bice-one.vercel.app/",
+    id: 3,
   },
   {
     title: "AI Cloudinary SaaS",
@@ -346,18 +344,17 @@ export const projects = [
     tags: ["React", "JavaScript"],
     source: "https://github.com/Shanidhya01/Cloudinary-Saas",
     visit: "https://github.com/Shanidhya01/Cloudinary-Saas",
-    // visit: 'https://google.com',
     id: 7,
   },
   {
-    title: "PassOP Password Manager",
+    title: "The Solve Space",
     description:
-      "A simple and modern password manager built with React (Vite), Node.js, Express, and MongoDB. PassOP lets you securely store, view, copy, edit, and delete your passwords for different websites. Features include a responsive UI, toast notifications, and a clean, minimal design.",
-    image: "/images/3.webp",
-    tags: ["React", "Node.js", "Express", "MongoDB", "Vite", "Tailwind CSS"],
-    source: "https://github.com/Shanidhya01/Password-Manager",
-    visit: "https://github.com/Shanidhya01/Password-Manager",
-    id: 8,
+      "A modern full-stack web application template built with Next.js, Stackflow, and Appwrite. This project demonstrates seamless navigation and state management using Stackflow, combined with Appwrite's powerful backend-as-a-service features for authentication, database, and storage. Ideal for building scalable, production-ready SaaS apps with a clean developer experience.",
+    image: "/images/1.webp",
+    tags: ["Next.js", "Stackflow", "Appwrite", "TypeScript"],
+    source: "https://github.com/Shanidhya01/StackFlow-Appwrite",
+    visit: "https://github.com/Shanidhya01/StackFlow-Appwrite",
+    id: 4,
   },
   {
     title: "3D Solar System Simulation",
@@ -369,56 +366,26 @@ export const projects = [
     visit: "https://3-d-solar-system-topaz.vercel.app/",
     id: 9,
   },
-];
 
-export const TimeLineData = [
+  // --- Simpler / Starter Projects ---
   {
-    year: 2023,
-    text: "Started B.E. in Computer Science (IoT & Cyber Security) at DSCE",
+    title: "Quiz App",
+    description:
+      "A simple and interactive Quiz App built with HTML, CSS, and JavaScript. Features include multiple-choice questions, instant feedback, score tracking, and a responsive user interface. Designed for learning and testing knowledge in a fun way.",
+    image: "/images/6.webp",
+    tags: ["JavaScript", "HTML", "CSS", "Frontend", "Quiz"],
+    source: "https://github.com/Shanidhya01/Ai-Quiz-Application",
+    visit: "https://shanidhya-ai-quiz-application-gamma.vercel.app/",
+    id: 5,
   },
   {
-    year: 2024,
-    text: "Began solving algorithmic problems on LeetCode and participated in contests",
-  },
-  {
-    year: 2024,
-    text: "Built first web projects like Quiz App, Weather App, and small games in Python",
-  },
-  {
-    year: 2024,
-    text: "Developed advanced React projects including AI ChatBot, Expense Tracker, and Victoria AI Assistant",
-  },
-  {
-    year: 2024,
-    text: "Explored full-stack development with Next.js, Appwrite, Express.js, and MongoDB",
-  },
-  {
-    year: 2025,
-    text: "Created large-scale applications like StackFlow (Q&A App), Cloudinary SaaS, and Video Calling WebApp",
-  },
-  {
-    year: 2025,
-    text: "Focused on backend integration, authentication, and database management (SQL, MongoDB, Prisma, NeonDB)",
-  },
-];
-
-export const ExperienceData = [
-  {
-    year: "2025-Present",
-    role: "Frontend Developer",
-    company: "Tech Innovators Inc.",
-    description: "Building modern UIs with React/Next.js",
-  },
-  {
-    year: "2023-2025",
-    role: "Web Development Intern",
-    company: "Creative Solutions",
-    description: "Developed landing pages and dashboards",
-  },
-  {
-    year: "2022-2023",
-    role: "Open Source Contributor",
-    company: "Various Projects",
-    description: "Contributed to open source React components",
+    title: "Weather App",
+    description:
+      "A responsive Weather App built with HTML, CSS, and JavaScript. Features include real-time weather data fetching, location-based search, dynamic weather icons, and a clean, user-friendly interface. Designed to provide accurate weather updates for any city worldwide.",
+    image: "/images/7.webp",
+    tags: ["JavaScript", "HTML", "CSS", "Frontend", "Weather"],
+    source: "https://github.com/Shanidhya01/Weather-app",
+    visit: "https://weather-app-byshanidhya.vercel.app/",
+    id: 6,
   },
 ];
