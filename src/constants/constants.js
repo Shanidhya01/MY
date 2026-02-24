@@ -1,6 +1,29 @@
 export const projects = [
   // --- AI-Powered & Microservices (Most Complex) ---
   {
+    title: "StackLens",
+    description:
+      "A full-stack website technology stack detection and performance analysis platform. Analyzes any website's tech stack — detecting frameworks, hosting providers, rendering strategies, UI patterns, and performance characteristics — from a single URL. Combines heuristic analysis, Puppeteer-based runtime inspection, and Lighthouse auditing across a distributed microservices architecture. Features include side-by-side comparison, scan history, PDF export, a Chrome extension, and Firebase authentication.",
+    image: "/images/27.webp",
+    tags: [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Firebase",
+      "Docker",
+      "Microservices",
+      "Puppeteer",
+      "Lighthouse",
+      "Chrome Extension",
+    ],
+    source: "https://github.com/Shanidhya01/stacklens",
+    visit: "https://stack-lens-sk.vercel.app",
+    id: 27,
+  },
+  {
     title: "BuildScope",
     description:
       "An AI-powered microservices platform that converts plain-English software ideas into comprehensive project blueprints. Features include AI blueprint generation via OpenRouter LLM, Firebase authentication (email/password + Google OAuth), full CRUD project management, PDF and Markdown export, dashboard with project stats, and a modern responsive UI. Built with a microservices architecture using an API Gateway pattern with independently deployable services.",
