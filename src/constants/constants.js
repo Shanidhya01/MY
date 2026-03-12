@@ -1,6 +1,28 @@
 export const projects = [
   // --- AI-Powered & Microservices (Most Complex) ---
   {
+    title: "SkillMap AI",
+    description:
+      "A full-stack career intelligence platform that turns resumes, job descriptions, GitHub profiles, and market signals into a practical skill-gap workflow. Features include PDF resume skill extraction, job-description analysis, matched and missing skill detection, AI-generated learning roadmaps, resume optimization suggestions, GitHub-based tech signal analysis, market-trending skill insights, readiness scoring, and saved analysis history for authenticated users.",
+    image: "/images/28.webp",
+    images: ["/images/28.webp", "/images/29.webp"],
+    tags: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Firebase",
+      "OpenRouter",
+      "GitHub API",
+      "AI/ML",
+    ],
+    source: "https://github.com/Shanidhya01/skillmap-ai",
+    visit: "https://skill-map-ai-client.vercel.app",
+    id: 28,
+  },
+  {
     title: "StackLens",
     description:
       "A full-stack website technology stack detection and performance analysis platform. Analyzes any website's tech stack — detecting frameworks, hosting providers, rendering strategies, UI patterns, and performance characteristics — from a single URL. Combines heuristic analysis, Puppeteer-based runtime inspection, and Lighthouse auditing across a distributed microservices architecture. Features include side-by-side comparison, scan history, PDF export, a Chrome extension, and Firebase authentication.",

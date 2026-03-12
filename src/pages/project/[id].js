@@ -9,6 +9,11 @@ const ProjectDetail = () => {
   const router = useRouter();
   const { id } = router.query;
   const project = projects.find(p => p.id === Number(id));
+  const projectImages = Array.isArray(project?.images) && project.images.length > 0
+    ? project.images
+    : project?.image
+      ? [project.image]
+      : [];
 
   if (!project) {
     return (
@@ -69,19 +74,47 @@ const ProjectDetail = () => {
           WebkitTextFillColor: 'transparent'
         }}>{project.title}</h1>
 
-        <img
-          src={project.image}
-          alt={project.title}
-          style={{
-            width: '100%',
-            maxHeight: 560,
-            objectFit: 'cover',
-            borderRadius: 16,
-            border: '1px solid rgba(99,102,241,0.2)',
-            boxShadow: '0 20px 40px rgba(0,0,0,0.3)',
-            marginBottom: '2rem'
-          }}
-        />
+        {projectImages.length > 0 && (
+          <div style={{ marginBottom: '2rem' }}>
+            <img
+              src={projectImages[0]}
+              alt={`${project.title} preview 1`}
+              style={{
+                width: '100%',
+                maxHeight: 560,
+                objectFit: 'cover',
+                borderRadius: 16,
+                border: '1px solid rgba(99,102,241,0.2)',
+                boxShadow: '0 20px 40px rgba(0,0,0,0.3)',
+                marginBottom: projectImages.length > 1 ? '1rem' : 0
+              }}
+            />
+
+            {projectImages.length > 1 && (
+              <div style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+                gap: '1rem'
+              }}>
+                {projectImages.slice(1).map((image, index) => (
+                  <img
+                    key={image}
+                    src={image}
+                    alt={`${project.title} preview ${index + 2}`}
+                    style={{
+                      width: '100%',
+                      height: 220,
+                      objectFit: 'cover',
+                      borderRadius: 14,
+                      border: '1px solid rgba(99,102,241,0.2)',
+                      boxShadow: '0 16px 30px rgba(0,0,0,0.22)'
+                    }}
+                  />
+                ))}
+              </div>
+            )}
+          </div>
+        )}
 
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 340px', gap: '2rem' }}>
           <div>
