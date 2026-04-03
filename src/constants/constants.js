@@ -23,6 +23,29 @@ export const projects = [
     id: 28,
   },
   {
+    title: "TogetherUs",
+    description:
+      "A full-stack virtual home for long-distance couples, built as a shared 2D pixel-art world. It includes private rooms, real-time avatar movement, PiP video calling, encrypted chat, synchronized watch/listen/game zones, collaborative study tools, and a cozy social experience designed to make distance feel closer.",
+    image: "/images/30.png",
+    images: ["/images/30.png", "/images/31.png"],
+    tags: [
+      "React",
+      "Vite",
+      "Node.js",
+      "Express",
+      "Socket.io",
+      "PostgreSQL",
+      "Redis",
+      "WebRTC",
+      "Tailwind CSS",
+      "Firebase",
+      "Full Stack",
+    ],
+    source: "https://github.com/Deepak0yadav/TogetherUs",
+    visit: "https://togetherus.in/",
+    id: 30,
+  },
+  {
     title: "StackLens",
     description:
       "A full-stack website technology stack detection and performance analysis platform. Analyzes any website's tech stack — detecting frameworks, hosting providers, rendering strategies, UI patterns, and performance characteristics — from a single URL. Combines heuristic analysis, Puppeteer-based runtime inspection, and Lighthouse auditing across a distributed microservices architecture. Features include side-by-side comparison, scan history, PDF export, a Chrome extension, and Firebase authentication.",
