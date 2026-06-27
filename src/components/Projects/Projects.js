@@ -6,9 +6,14 @@ import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalCompon
 import { ProjectsContainer, ProjectCard, ProjectImage, ProjectImageOverlay, ProjectContent, ProjectTitle, ProjectDescription, ProjectTechStack, TechTag, ProjectLinks, ProjectLink } from './ProjectsStyles';
 import { projects } from '../../constants/constants';
 
+const INITIAL_COUNT = 10;
+
 const Projects = () => {
 	const validProjects = projects.filter((p) => p && p.image && p.title && (p.id !== undefined && p.id !== null));
 	const [hoveredProject, setHoveredProject] = useState(null);
+	const [showAll, setShowAll] = useState(false);
+
+	const visibleProjects = showAll ? validProjects : validProjects.slice(0, INITIAL_COUNT);
 
 	return (
 		<Section nopadding id="projects">
@@ -26,7 +31,7 @@ const Projects = () => {
 			</p>
 
 			<ProjectsContainer>
-				{validProjects.map((project, index) => (
+				{visibleProjects.map((project, index) => (
 					<ProjectCard
 						key={project.id}
 						onMouseEnter={() => setHoveredProject(project.id)}
@@ -132,6 +137,32 @@ const Projects = () => {
 					</ProjectCard>
 				))}
 			</ProjectsContainer>
+
+			{validProjects.length > INITIAL_COUNT && (
+				<div style={{ textAlign: 'center', margin: '1rem 0 3rem' }}>
+					<button
+						onClick={() => setShowAll((prev) => !prev)}
+						style={{
+							padding: '0.85rem 2.5rem',
+							background: showAll ? 'rgba(99,102,241,0.08)' : 'linear-gradient(135deg, #6366f1, #8b5cf6)',
+							color: '#fff',
+							border: showAll ? '1px solid rgba(99,102,241,0.4)' : 'none',
+							borderRadius: '12px',
+							fontWeight: 600,
+							fontSize: '1rem',
+							cursor: 'pointer',
+							transition: 'all 0.3s cubic-bezier(0.4,0,0.2,1)',
+							boxShadow: showAll ? 'none' : '0 8px 20px rgba(99,102,241,0.3)',
+						}}
+						onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 12px 28px rgba(99,102,241,0.35)'; }}
+						onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = showAll ? 'none' : '0 8px 20px rgba(99,102,241,0.3)'; }}
+					>
+						{showAll
+							? `Show Less ↑`
+							: `Show All ${validProjects.length} Projects ↓`}
+					</button>
+				</div>
+			)}
 		</Section>
 	);
 };

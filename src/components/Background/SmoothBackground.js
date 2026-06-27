@@ -90,16 +90,11 @@ const BackgroundContainer = styled.div`
   }};
   
   background-position: center;
-  background-attachment: fixed;
-  
+
   ${({ variant, animated }) => variant === 'flowing' && animated && `
     animation: ${gradientFlow} 20s ease infinite;
+    will-change: background-position;
   `}
-  
-  /* Smooth rendering */
-  backface-visibility: hidden;
-  transform: translateZ(0);
-  will-change: background-position;
 `;
 
 /* ============ Enhanced Particle System ============ */

@@ -253,10 +253,6 @@ export const Layout = ({
       top: 0,
       behavior: 'smooth'
     });
-    
-    if (enableNotifications) {
-      addNotification('Scrolled to top', 'success', 2000);
-    }
   }, [addNotification, enableNotifications]);
 
   const handleKeyboardNavigation = useCallback((e) => {

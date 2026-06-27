@@ -130,7 +130,10 @@ const ExperienceCard = ({ title, duration, organization, description, achievemen
 const Experience = () => (
   <Section id="experience">
     <SectionTitle>Professional Experience</SectionTitle>
-    <SectionText style={{ maxWidth: '900px', margin: '0 auto' }}>
+    <SectionText>
+      Practical experience building full-stack applications and contributing to the global open-source community.
+    </SectionText>
+    <div style={{ maxWidth: '900px' }}>
       <ExperienceCard
         title="Full Stack Developer"
         duration="July 2025 – October 2025"
@@ -158,7 +161,7 @@ const Experience = () => (
           text: 'holopin.io/@shanidhya01 →',
         }}
       />
-    </SectionText>
+    </div>
   </Section>
 );
 
